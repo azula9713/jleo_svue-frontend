@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import Button from "../components/Common/Button";
-import HeroSlider from "../components/Home/HeroSlider";
+import styled from 'styled-components'
+import Button from '../components/Common/Button'
+import HeroSlider from '../components/Home/HeroSlider'
 
-import Header from "../components/Layout/Header";
+import Header from '../components/Layout/Header'
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
 
       <footer>Footer</footer>
     </div>
-  );
+  )
 }
 
 const Main = styled.main`
@@ -24,4 +24,4 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
+`

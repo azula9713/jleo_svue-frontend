@@ -1,5 +1,5 @@
 const Button = () => {
-  return <button>Enter</button>;
-};
+  return <button>Enter</button>
+}
 
-export default Button;
+export default Button

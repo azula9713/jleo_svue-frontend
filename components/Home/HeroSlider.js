@@ -1,5 +1,5 @@
 const HeroSlider = () => {
-  return <div>Hero Slider</div>;
-};
+  return <div>Hero Slider</div>
+}
 
-export default HeroSlider;
+export default HeroSlider
