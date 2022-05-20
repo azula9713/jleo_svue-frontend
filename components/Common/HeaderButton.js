@@ -15,7 +15,7 @@ export default HeaderButton
 const Container = styled.div`
   background-color: ${({ btnColor }) => btnColor};
   padding: 26px 32px;
-  width: 100%;
+  width: max-content;
   max-height: 72px;
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@ const Container = styled.div`
     position: absolute;
     width: 80%;
     transform: scaleX(0);
-    height: 4px;
+    height: 3px;
     bottom: 20px;
     left: 30px;
     right: 10px;

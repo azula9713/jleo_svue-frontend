@@ -4,8 +4,16 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import NavLinks from '../../data/NavLinks'
 import HeaderButton from '../Common/HeaderButton'
+import MegaMenu from './MegaMenu'
+import { useEffect, useState } from 'react'
 
 const Header = () => {
+  const [hoveredTitle, setHoveredTitle] = useState('')
+
+  useEffect(() => {
+    console.log('hovering over: ' + hoveredTitle)
+  }, [hoveredTitle])
+
   return (
     <>
       <Head>
@@ -21,44 +29,66 @@ const Header = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HeaderSection>
-        <LinkContainer>
-          <ImageContainer>
-            <Image
-              src="/logojleo.svg"
-              alt="J'LEO SVUE"
-              height={72}
-              width={180}
+      <Headbar>
+        <HeaderSection>
+          <LinkContainer>
+            <ImageContainer>
+              <Image
+                src="/logojleo.svg"
+                alt="J'LEO SVUE"
+                height={72}
+                width={180}
+              />
+            </ImageContainer>
+            <NavLinkContainer>
+              {NavLinks.map((navLink) => (
+                <Link key={navLink.id} href={navLink.link}>
+                  <NavLinkItem
+                    onMouseEnter={() => {
+                      if (navLink.link === '#') {
+                        setHoveredTitle(navLink.name)
+                      }
+                    }}
+                    onMouseLeave={() => {
+                      setHoveredTitle('')
+                    }}
+                  >
+                    {navLink.name}
+                  </NavLinkItem>
+                </Link>
+              ))}
+            </NavLinkContainer>
+          </LinkContainer>
+          <ButtonContainer>
+            <HeaderButton
+              btnColor="transparent"
+              btnText="I want an appointment"
+              btnIcon="CalendarIcon"
+              textColor="#5C5C5C"
             />
-          </ImageContainer>
-          <NavLinkContainer>
-            {NavLinks.map((navLink) => (
-              <Link key={navLink.id} href={navLink.link}>
-                <NavLinkItem>{navLink.name}</NavLinkItem>
-              </Link>
-            ))}
-          </NavLinkContainer>
-        </LinkContainer>
-        <ButtonContainer>
-          <HeaderButton
-            btnColor="transparent"
-            btnText="I want an appointment"
-            btnIcon="CalendarIcon"
-            textColor="#5C5C5C"
-          />
-          <HeaderButton
-            btnColor="#485879"
-            btnText="I want a quote"
-            btnIcon="DocumentTextIcon"
-            textColor="#ffffff"
-          />
-        </ButtonContainer>
-      </HeaderSection>
+            <HeaderButton
+              btnColor="#485879"
+              btnText="I want a quote"
+              btnIcon="DocumentTextIcon"
+              textColor="#ffffff"
+            />
+          </ButtonContainer>
+        </HeaderSection>
+        {/* add a revealing effect to mega menu */}
+        {hoveredTitle !== '' && <MegaMenu menuTitle={hoveredTitle} />}
+      </Headbar>
     </>
   )
 }
 
 export default Header
+
+const Headbar = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
 
 const HeaderSection = styled.header`
   display: flex;
@@ -66,6 +96,11 @@ const HeaderSection = styled.header`
   justify-content: space-between;
   width: 100vw;
   height: 72px;
+
+  //make sure header is always at the top
+  position: sticky;
+  top: 0;
+  z-index: 1;
 
   background-repeat: no-repeat;
   background-size: cover;

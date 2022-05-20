@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Button from '../components/Common/Button'
 import HeroSlider from '../components/Home/HeroSlider'
+import TestComp from '../components/Home/TestComp'
 
 import Header from '../components/Layout/Header'
 
@@ -12,6 +13,12 @@ export default function Home() {
       <Main>
         <HeroSlider />
         <Button />
+        <TestComp />
+        <TestComp />
+        <TestComp />
+        <TestComp />
+        <TestComp />
+        <TestComp />
       </Main>
 
       <footer>Footer</footer>
