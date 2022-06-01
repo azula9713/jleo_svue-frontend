@@ -1,13 +1,31 @@
 import styled from 'styled-components'
+import { Fade } from 'react-reveal'
+import { useSetRecoilState } from 'recoil'
+import { hoveredNavAtom } from '../../atoms/headerAtom'
 
 const MegaMenu = ({ menuTitle }) => {
-  return <MegaMenuContainer>{menuTitle}</MegaMenuContainer>
+  const setHoveredTitle = useSetRecoilState(hoveredNavAtom)
+
+  return (
+    <MegaMenuContainer>
+      {/* apply fade effect on closing */}
+      <Fade top ssrFadeout duration={500}>
+        <Wrapper
+          onMouseLeave={() => {
+            setHoveredTitle('')
+          }}
+        >
+          {menuTitle}
+        </Wrapper>
+      </Fade>
+    </MegaMenuContainer>
+  )
 }
 
 export default MegaMenu
 
 const MegaMenuContainer = styled.div`
-  background-color: red;
+  background-color: transparent;
   width: 100%;
   height: 200px;
   display: flex;
@@ -17,4 +35,10 @@ const MegaMenuContainer = styled.div`
   top: 72px;
   left: 0;
   z-index: 55;
+`
+
+const Wrapper = styled.div`
+  width: 100vw;
+  height: 200px;
+  background-color: #fff;
 `

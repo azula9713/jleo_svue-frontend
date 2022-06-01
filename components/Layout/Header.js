@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -5,14 +6,11 @@ import styled from 'styled-components'
 import NavLinks from '../../data/NavLinks'
 import HeaderButton from '../Common/HeaderButton'
 import MegaMenu from './MegaMenu'
-import { useEffect, useState } from 'react'
+import { useRecoilState } from 'recoil'
+import { hoveredNavAtom } from '../../atoms/headerAtom'
 
 const Header = () => {
-  const [hoveredTitle, setHoveredTitle] = useState('')
-
-  useEffect(() => {
-    console.log('hovering over: ' + hoveredTitle)
-  }, [hoveredTitle])
+  const [hoveredTitle, setHoveredTitle] = useRecoilState(hoveredNavAtom)
 
   return (
     <>
@@ -48,9 +46,6 @@ const Header = () => {
                       if (navLink.link === '#') {
                         setHoveredTitle(navLink.name)
                       }
-                    }}
-                    onMouseLeave={() => {
-                      setHoveredTitle('')
                     }}
                   >
                     {navLink.name}
