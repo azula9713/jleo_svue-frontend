@@ -1,27 +1,17 @@
 import styled from 'styled-components'
-import Button from '../components/Common/Button'
-import HeroSlider from '../components/Home/HeroSlider'
-import TestComp from '../components/Home/TestComp'
-
+import HeroBanner from '../components/Home/HeroBanner'
+import Footer from '../components/Layout/Footer'
 import Header from '../components/Layout/Header'
 
 export default function Home() {
   return (
     <div>
       <Header />
-
       <Main>
-        <HeroSlider />
-        <Button />
-        <TestComp />
-        <TestComp />
-        <TestComp />
-        <TestComp />
-        <TestComp />
-        <TestComp />
+        <HeroBanner />
       </Main>
 
-      <footer>Footer</footer>
+      <Footer />
     </div>
   )
 }

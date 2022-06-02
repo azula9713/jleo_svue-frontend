@@ -9,7 +9,7 @@ export default TestComp
 const Container = styled.div`
   background-color: blue;
   width: 100%;
-  height: 200px;
+  height: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;

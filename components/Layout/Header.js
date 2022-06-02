@@ -89,7 +89,7 @@ const HeaderSection = styled.header`
   align-items: center;
   justify-content: space-between;
   width: 100vw;
-  height: 72px;
+  height: 5rem;
 
   //make sure header is always at the top
   position: sticky;
@@ -110,8 +110,8 @@ const LinkContainer = styled.div`
 `
 
 const ImageContainer = styled.div`
-  max-height: 72px;
-  padding: 0 36px;
+  max-height: 5rem;
+  padding: 0 1.7rem;
   width: 30%;
   display: flex;
   align-items: center;
@@ -123,12 +123,12 @@ const NavLinkContainer = styled.nav`
   align-items: center;
   justify-content: flex-start;
   width: 70%;
-  padding: 0 36px;
+  padding: 0 1.7rem;
 `
 const NavLinkItem = styled.a`
   font-size: 1.1rem;
   color: #5c5c5c;
-  margin: 0 16px;
+  margin: 0 1.1rem;
   cursor: pointer;
 `
 

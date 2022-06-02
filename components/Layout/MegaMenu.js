@@ -9,7 +9,7 @@ const MegaMenu = ({ menuTitle }) => {
   return (
     <MegaMenuContainer>
       {/* apply fade effect on closing */}
-      <Fade top ssrFadeout duration={500}>
+      <Fade left ssrFadeout duration={500}>
         <Wrapper
           onMouseLeave={() => {
             setHoveredTitle('')
@@ -27,18 +27,18 @@ export default MegaMenu
 const MegaMenuContainer = styled.div`
   background-color: transparent;
   width: 100%;
-  height: 200px;
+  height: 20rem;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 72px;
+  top: 5rem;
   left: 0;
   z-index: 55;
 `
 
 const Wrapper = styled.div`
   width: 100vw;
-  height: 200px;
+  height: 20rem;
   background-color: #fff;
 `

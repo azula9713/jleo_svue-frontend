@@ -5,7 +5,7 @@ const CustomIcon = ({
   icon,
   color = 'black',
   isOutline = false,
-  size = '20px',
+  size = '1.1rem',
 }) => {
   const { ...icons } = isOutline ? OutlineIcons : SolidIcons
 

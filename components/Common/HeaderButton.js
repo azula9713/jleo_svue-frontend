@@ -14,9 +14,9 @@ export default HeaderButton
 
 const Container = styled.div`
   background-color: ${({ btnColor }) => btnColor};
-  padding: 26px 32px;
+  padding: 1.7rem 1.3rem;
   width: max-content;
-  max-height: 72px;
+  max-height: 5rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -28,10 +28,10 @@ const Container = styled.div`
     position: absolute;
     width: 80%;
     transform: scaleX(0);
-    height: 3px;
-    bottom: 20px;
-    left: 30px;
-    right: 10px;
+    height: 0.2rem;
+    bottom: 1rem;
+    left: 1.5rem;
+    right: 0.5rem;
     background-color: ${({ textClr }) => textClr};
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
@@ -48,11 +48,11 @@ const ButtonLabel = styled.span`
   //make sure text is one line
   white-space: nowrap;
   overflow: hidden;
-  margin-right: 16px;
+  margin-right: 0.7rem;
   text-transform: uppercase;
   font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.05rem;
   transition: all 0.3s ease-in-out;
 
   @media (max-width: 1600px) {
