@@ -91,7 +91,7 @@ const InfoSection = styled(LogoSection)`
 
 const AddressSection = styled.div`
   width: 100%;
-  padding: 0.5rem 2rem;
+  padding: 0.2rem 1.5rem;
   margin: 0.5rem 0;
 `
 
