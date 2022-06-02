@@ -9,3 +9,10 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
+.ri-social-icon {
+  font-size: 1.5em;
+  margin: 0.5em 1em;
+  margin-left: 0;
+  cursor: pointer;
+}

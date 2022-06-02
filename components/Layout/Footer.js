@@ -1,7 +1,14 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import {
+  RiInstagramFill,
+  RiFacebookFill,
+  RiTwitterFill,
+  RiYoutubeFill,
+} from 'react-icons/ri'
 
 import FooterLocale from '../../data/lang/Footer-en.json'
+import { customStyles } from '../../data/constants/customStyles'
 
 const Footer = () => {
   return (
@@ -25,6 +32,12 @@ const Footer = () => {
           </ContactSection>
           <SocialSection>
             <Title>{FooterLocale.infoSection.socialTitle}</Title>
+            <SocialIcons>
+              <RiFacebookFill className={customStyles.socialMediaIcon} />
+              <RiInstagramFill className={customStyles.socialMediaIcon} />
+              <RiTwitterFill className={customStyles.socialMediaIcon} />
+              <RiYoutubeFill className={customStyles.socialMediaIcon} />
+            </SocialIcons>
           </SocialSection>
         </InfoSection>
       </FooterWrapper>
@@ -40,7 +53,7 @@ const FooterContainer = styled.footer`
   align-items: center;
   justify-content: center;
   background-color: #eeeeee;
-  height: 22rem;
+  height: 25em;
 `
 
 const FooterWrapper = styled.div`
@@ -108,4 +121,11 @@ const Value = styled.p`
   font-size: 0.9rem;
   font-weight: 500;
   line-height: 1.5rem;
+`
+
+const SocialIcons = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 `
