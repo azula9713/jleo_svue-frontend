@@ -54,6 +54,7 @@ const FooterContainer = styled.footer`
   justify-content: center;
   background-color: #eeeeee;
   height: 25em;
+  border-top: 0.1rem solid #ccc;
 `
 
 const FooterWrapper = styled.div`

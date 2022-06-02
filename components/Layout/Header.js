@@ -136,4 +136,5 @@ const ButtonContainer = styled(NavLinkContainer)`
   justify-content: flex-end;
   padding: 0;
   width: max-content;
+  margin-right: 0.1rem;
 `
