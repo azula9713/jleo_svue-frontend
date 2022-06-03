@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import WeDoItem from './WeDoItem'
+import SectionTitle from '../Common/SectionTitle'
 
 import WeDoData from '../../data/constants/WeDoItems'
 import HomeLocale from '../../data/lang/Home-en.json'
@@ -9,7 +10,7 @@ const WeDoSection = () => {
   return (
     <>
       <Info>
-        <Title>{HomeLocale.weDo.title}</Title>
+        <SectionTitle title={HomeLocale.weDo.title} />
         <Desc>{HomeLocale.weDo.desc}</Desc>
       </Info>
       <ItemsWrapper>

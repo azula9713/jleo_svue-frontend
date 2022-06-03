@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styled from 'styled-components'
 import HeroBanner from '../components/Home/HeroBanner'
+import OurWork from '../components/Home/OurWork'
 import WeDoSection from '../components/Home/WeDoSection'
 import Footer from '../components/Layout/Footer'
 import Header from '../components/Layout/Header'
@@ -15,6 +16,7 @@ export default function Home() {
       <Main>
         <HeroBanner />
         <WeDoSection />
+        <OurWork />
       </Main>
 
       <Footer />

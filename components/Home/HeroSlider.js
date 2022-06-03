@@ -1,8 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
+import { useSetRecoilState } from 'recoil'
 import styled, { css } from 'styled-components'
 
-const HeroSlider = ({ slides }) => {
+import { hoveredPortfolioAtom } from '../../atoms/miniPortfolioAtom'
+
+const HeroSlider = ({ slides, isPortfolio }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const setCurrSlide = useSetRecoilState(hoveredPortfolioAtom)
   const timeout = useRef(null)
 
   const length = slides.length
@@ -19,6 +23,10 @@ const HeroSlider = ({ slides }) => {
   useEffect(() => {
     clearTimeout(timeout.current)
     timeout.current = setTimeout(nextSlide, 5000)
+
+    if (isPortfolio) {
+      setCurrSlide(currentSlide)
+    }
 
     return () => clearTimeout(timeout.current)
 
