@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import styled, { css } from 'styled-components'
-import { IoArrowForward, IoArrowBack } from 'react-icons/io5'
 
 const HeroSlider = ({ slides }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
