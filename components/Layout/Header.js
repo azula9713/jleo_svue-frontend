@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
-import NavLinks from '../../data/NavLinks'
+import NavLinks from '../../data/constants/NavLinks'
 import HeaderButton from '../Common/HeaderButton'
 import MegaMenu from './MegaMenu'
 import { useRecoilState } from 'recoil'

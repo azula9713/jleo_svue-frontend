@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import CTASection from './CTASection'
 import HeroSlider from './HeroSlider'
 
+import sldierData from '../../data/constants/SliderData'
+
 const HeroBanner = () => {
   return (
     <HeroSection>
@@ -9,7 +11,7 @@ const HeroBanner = () => {
         <CTASection />
       </CtaContainer>
       <SliderContainer>
-        <HeroSlider />
+        <HeroSlider slides={sldierData} />
       </SliderContainer>
     </HeroSection>
   )
@@ -22,7 +24,7 @@ const HeroSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 8rem);
   background-color: ${(props) => props.theme.bgPrimary};
 `
 
@@ -32,12 +34,12 @@ const CtaContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   border: ${(props) => props.theme.borderSecondary};
-  width: 45%;
+  width: 48%;
 
   height: 90%;
 `
 
 const SliderContainer = styled.div`
-  width: 45%;
-  border-left: ${(props) => props.theme.borderPrimary};
+  width: 48%;
+  height: calc(100vh - 8rem);
 `

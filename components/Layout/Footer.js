@@ -8,7 +8,7 @@ import {
 } from 'react-icons/ri'
 
 import FooterLocale from '../../data/lang/Footer-en.json'
-import { customStyles } from '../../data/constants/customStyles'
+import { customStyles } from '../../styles/customStyles'
 
 const Footer = () => {
   return (
