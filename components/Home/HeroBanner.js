@@ -33,7 +33,7 @@ const CtaContainer = styled.div`
   flex-direction: column;
   border: 0.1rem solid #e3c79d;
   width: 45%;
-  margin: 2rem;
+
   height: 90%;
 `
 

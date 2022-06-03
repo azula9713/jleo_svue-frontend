@@ -20,9 +20,9 @@ const CTASection = () => {
           btnColor="transparent"
           btnText="I want an appointment"
           btnIcon="CalendarIcon"
-          textColor="#5C5C5C"
+          textColor="#485879"
           customWidth={'16rem'}
-          borderColor="#5C5C5C"
+          borderColor="#485879"
         />
       </ActionContainer>
     </CtaWrapper>
@@ -49,7 +49,7 @@ const Title = styled.h1`
 
 const Desc = styled.p`
   font-weight: 400;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.3rem;
   color: #5c5c5c;
 `
