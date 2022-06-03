@@ -1,9 +1,13 @@
 import styled from 'styled-components'
+import Image from 'next/image'
 
 const WeDoItem = ({ item }) => {
   return (
     <ItemContainer>
       <ItemTitle>{item.title}</ItemTitle>
+      <ItemData>
+        <Image src={item.image} alt={item.title} height={200} width={340} />
+      </ItemData>
     </ItemContainer>
   )
 }
@@ -28,4 +32,8 @@ const ItemTitle = styled.h4`
   text-align: left;
   color: ${(props) => props.theme.textPrimary};
   max-width: 20rem;
+`
+const ItemData = styled.div`
+  margin-top: 5rem;
+  margin-bottom: 10rem;
 `

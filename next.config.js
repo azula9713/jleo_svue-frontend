@@ -4,6 +4,13 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  images: {
+    domains: [
+      'www.probuilder.com.au',
+      'www.bestinteriordesigners.eu',
+      'ts-c.com.sa',
+    ],
+  },
 }
 
 module.exports = nextConfig
