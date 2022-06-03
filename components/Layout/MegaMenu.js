@@ -40,5 +40,5 @@ const MegaMenuContainer = styled.div`
 const Wrapper = styled.div`
   width: 100vw;
   height: 20rem;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.white};
 `

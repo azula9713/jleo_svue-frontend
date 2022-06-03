@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import HomeLocale from '../../data/lang/Home-en.json'
+import defaultTheme from '../../styles/themeConfig'
 import HeaderButton from '../Common/HeaderButton'
 
 const CTASection = () => {
@@ -9,20 +10,20 @@ const CTASection = () => {
       <Desc>{HomeLocale.heroBanner.desc}</Desc>
       <ActionContainer>
         <HeaderButton
-          btnColor="#485879"
+          btnColor={defaultTheme.primary}
           btnText="I want a quote"
           btnIcon="DocumentTextIcon"
-          textColor="#ffffff"
+          textColor={defaultTheme.white}
           customWidth={'16rem'}
-          borderColor="#485879"
+          borderColor={defaultTheme.primary}
         />
         <HeaderButton
           btnColor="transparent"
           btnText="I want an appointment"
           btnIcon="CalendarIcon"
-          textColor="#485879"
+          textColor={defaultTheme.primary}
           customWidth={'16rem'}
-          borderColor="#485879"
+          borderColor={defaultTheme.primary}
         />
       </ActionContainer>
     </CtaWrapper>
@@ -41,7 +42,7 @@ const Title = styled.h1`
   font-size: 2rem;
   font-weight: 800;
   line-height: 3rem;
-  color: #5c5c5c;
+  color: ${(props) => props.theme.textPrimary};
   text-transform: uppercase;
   text-align: left;
   letter-spacing: 0.3rem;
@@ -51,7 +52,7 @@ const Desc = styled.p`
   font-weight: 400;
   font-size: 1.1rem;
   line-height: 1.3rem;
-  color: #5c5c5c;
+  color: ${(props) => props.theme.textPrimary};
 `
 const ActionContainer = styled.div`
   display: flex;

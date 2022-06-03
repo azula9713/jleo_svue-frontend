@@ -23,7 +23,7 @@ const HeroSection = styled.section`
   align-items: center;
   justify-content: space-between;
   height: calc(100vh - 5rem);
-  background-color: #eeeeee;
+  background-color: ${(props) => props.theme.bgPrimary};
 `
 
 const CtaContainer = styled.div`
@@ -31,7 +31,7 @@ const CtaContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 0.1rem solid #e3c79d;
+  border: ${(props) => props.theme.borderSecondary};
   width: 45%;
 
   height: 90%;
@@ -39,5 +39,5 @@ const CtaContainer = styled.div`
 
 const SliderContainer = styled.div`
   width: 45%;
-  border-left: 0.1rem solid #ccc;
+  border-left: ${(props) => props.theme.borderPrimary};
 `

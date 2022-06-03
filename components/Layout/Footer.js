@@ -52,9 +52,9 @@ const FooterContainer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #eeeeee;
+  background-color: ${(props) => props.theme.bgPrimary};
   height: 25em;
-  border-top: 0.1rem solid #ccc;
+  border-top: ${(props) => props.theme.borderPrimary};
 `
 
 const FooterWrapper = styled.div`
@@ -108,7 +108,7 @@ const Values = styled.div`
 `
 
 const Title = styled.h6`
-  color: #c7a879;
+  color: ${(props) => props.theme.secondary};
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;

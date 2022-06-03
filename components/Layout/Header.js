@@ -6,6 +6,7 @@ import HeaderButton from '../Common/HeaderButton'
 import MegaMenu from './MegaMenu'
 import { useRecoilState } from 'recoil'
 import { hoveredNavAtom } from '../../atoms/headerAtom'
+import defaultTheme from '../../styles/themeConfig'
 
 const Header = () => {
   const [hoveredTitle, setHoveredTitle] = useRecoilState(hoveredNavAtom)
@@ -43,13 +44,13 @@ const Header = () => {
             btnColor="transparent"
             btnText="I want an appointment"
             btnIcon="CalendarIcon"
-            textColor="#5C5C5C"
+            textColor={defaultTheme.textPrimary}
           />
           <HeaderButton
-            btnColor="#485879"
+            btnColor={defaultTheme.primary}
             btnText="I want a quote"
             btnIcon="DocumentTextIcon"
-            textColor="#ffffff"
+            textColor={defaultTheme.white}
           />
         </ButtonContainer>
       </HeaderSection>
@@ -108,7 +109,7 @@ const NavLinkContainer = styled.nav`
 `
 const NavLinkItem = styled.a`
   font-size: 1.1rem;
-  color: #5c5c5c;
+  color: ${(props) => props.theme.textPrimary};
   margin: 0 1.1rem;
   cursor: pointer;
 `

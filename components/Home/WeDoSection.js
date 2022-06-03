@@ -20,13 +20,13 @@ const Section = styled.section`
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  border: 0.1rem solid #e3c79d;
+  border: ${(props) => props.theme.borderSecondary};
 `
 
 const Title = styled.h2`
   margin: 0;
   text-transform: uppercase;
-  color: #b4b4b4;
+  color: ${(props) => props.theme.textSecondary};
   font-weight: 700;
   font-size: 6rem;
   line-height: 8rem;
@@ -40,5 +40,5 @@ const Desc = styled.p`
   font-size: 1.1rem;
   text-align: justify;
   line-height: 2rem;
-  color: #5c5c5c;
+  color: ${(props) => props.theme.textPrimary};
 `
