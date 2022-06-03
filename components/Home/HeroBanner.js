@@ -22,20 +22,22 @@ const HeroSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100vh;
+  height: calc(100vh - 5rem);
   background-color: #eeeeee;
 `
 
 const CtaContainer = styled.div`
-  border-right: 0.1rem solid #ccc;
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border: 0.1rem solid #e3c79d;
+  width: 45%;
+  margin: 2rem;
+  height: 90%;
 `
 
 const SliderContainer = styled.div`
-  width: 100%;
+  width: 45%;
+  border-left: 0.1rem solid #ccc;
 `

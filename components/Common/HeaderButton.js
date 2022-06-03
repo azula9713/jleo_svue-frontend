@@ -1,9 +1,21 @@
 import styled from 'styled-components'
 import CustomIcon from './CustomIcon'
 
-const HeaderButton = ({ btnText, btnColor, btnIcon, textColor }) => {
+const HeaderButton = ({
+  btnText,
+  btnColor,
+  btnIcon,
+  textColor,
+  customWidth,
+  borderColor,
+}) => {
   return (
-    <Container btnColor={btnColor} textClr={textColor}>
+    <Container
+      btnColor={btnColor}
+      textClr={textColor}
+      width={customWidth}
+      borderColor={borderColor}
+    >
       <ButtonLabel textClr={textColor}>{btnText}</ButtonLabel>
       <CustomIcon icon={btnIcon} isOutline color={textColor} />
     </Container>
@@ -14,14 +26,16 @@ export default HeaderButton
 
 const Container = styled.div`
   background-color: ${({ btnColor }) => btnColor};
-  padding: 1.7rem 1.3rem;
-  width: max-content;
-  max-height: 5rem;
+  padding: 1.4rem 1.3rem;
+  width: ${({ width }) => (width ? width : 'max-content')};
+  max-height: 4.5rem;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   cursor: pointer;
   position: relative;
+  border: 0.1rem solid
+    ${({ borderColor }) => (borderColor ? borderColor : 'transparent')};
 
   &::after {
     content: '';

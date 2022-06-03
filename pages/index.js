@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import styled from 'styled-components'
 import HeroBanner from '../components/Home/HeroBanner'
 import Footer from '../components/Layout/Footer'
@@ -5,14 +6,17 @@ import Header from '../components/Layout/Header'
 
 export default function Home() {
   return (
-    <div>
+    <>
+      <Head>
+        <title>J&apos;LEO SVUE</title>
+      </Head>
       <Header />
       <Main>
         <HeroBanner />
       </Main>
 
       <Footer />
-    </div>
+    </>
   )
 }
 
