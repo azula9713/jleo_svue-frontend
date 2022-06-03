@@ -1,22 +1,25 @@
-import styled from "styled-components";
-import Button from "../components/Common/Button";
-import HeroSlider from "../components/Home/HeroSlider";
-
-import Header from "../components/Layout/Header";
+import Head from 'next/head'
+import styled from 'styled-components'
+import HeroBanner from '../components/Home/HeroBanner'
+import WeDoSection from '../components/Home/WeDoSection'
+import Footer from '../components/Layout/Footer'
+import Header from '../components/Layout/Header'
 
 export default function Home() {
   return (
-    <div>
+    <>
+      <Head>
+        <title>J&apos;LEO SVUE</title>
+      </Head>
       <Header />
-
       <Main>
-        <HeroSlider />
-        <Button />
+        <HeroBanner />
+        <WeDoSection />
       </Main>
 
-      <footer>Footer</footer>
-    </div>
-  );
+      <Footer />
+    </>
+  )
 }
 
 const Main = styled.main`
@@ -24,4 +27,5 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
+  margin: 2rem;
+`

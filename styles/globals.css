@@ -2,15 +2,18 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  background: #eeeeee;
 }
 
 * {
   box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.ri-social-icon {
+  font-size: 1.5em;
+  margin: 0.5em 1em;
+  margin-left: 0;
+  cursor: pointer;
 }
