@@ -61,7 +61,6 @@ const WorkTab = styled.div`
   flex-direction: column;
   padding: 1rem 2rem;
 
-  //remove border bottom for last item
   &:first-child {
     border-top: none;
   }

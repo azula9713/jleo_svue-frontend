@@ -145,7 +145,6 @@ const Slider = styled.div`
     left: 0;
     opacity: 0.5;
     overflow: hidden;
-    //add linear-gradient background
     background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.4) 0%,
