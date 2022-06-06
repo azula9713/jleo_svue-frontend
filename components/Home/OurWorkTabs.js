@@ -54,8 +54,7 @@ const PortfolioContainer = styled.div`
 const WorkTab = styled.div`
   height: ${(props) => (props.isHovered ? '40%' : '20%')};
   transition: height 0.2s ease-in-out;
-  border: ${(props) => props.theme.borderSecondary};
-  border-bottom: none;
+  border-top: ${(props) => props.theme.borderSecondary};
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -63,8 +62,8 @@ const WorkTab = styled.div`
   padding: 1rem 2rem;
 
   //remove border bottom for last item
-  &:last-child {
-    border-bottom: ${(props) => props.theme.borderSecondary};
+  &:first-child {
+    border-top: none;
   }
 `
 const TypeAndLocation = styled.div`

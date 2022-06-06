@@ -60,4 +60,5 @@ const SliderContainer = styled.div`
 const TabContainer = styled.div`
   width: 30%;
   height: 40rem;
+  border: ${(props) => props.theme.borderSecondary};
 `
