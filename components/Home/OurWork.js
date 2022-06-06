@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 
+import { useRecoilValue } from 'recoil'
 import SectionTitle from '../Common/SectionTitle'
 import HeroSlider from './HeroSlider'
+import OurWorkTabs from './OurWorkTabs'
 
 import HomeLocale from '../../data/lang/Home-en.json'
 import portfolioData from '../../data/constants/MiniPortfolioData'
-import OurWorkTabs from './OurWorkTabs'
+import { hoveredPortfolioAtom } from '../../atoms/miniPortfolioAtom'
 
 const OurWork = () => {
+  const currSlide = useRecoilValue(hoveredPortfolioAtom)
+
   return (
     <OurWorkContainer>
       <TitleContainer>
@@ -15,7 +19,7 @@ const OurWork = () => {
       </TitleContainer>
       <WorkContainer>
         <SliderContainer>
-          <HeroSlider slides={portfolioData} isPortfolio />
+          <HeroSlider slides={portfolioData} isPortfolio current={currSlide} />
         </SliderContainer>
         <TabContainer>
           <OurWorkTabs data={portfolioData} />
@@ -28,7 +32,7 @@ const OurWork = () => {
 export default OurWork
 
 const OurWorkContainer = styled.section`
-  margin: 2rem 0;
+  margin-bottom: 2rem;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -46,7 +50,6 @@ const WorkContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border: ${(props) => props.theme.borderSecondary};
 `
 
 const SliderContainer = styled.div`

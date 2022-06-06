@@ -9,6 +9,10 @@ const nextConfig = {
       'www.probuilder.com.au',
       'www.bestinteriordesigners.eu',
       'ts-c.com.sa',
+      'www.ultimatebali.com',
+      'static.dezeen.com',
+      'nhs-dynamic.secure.footprint.net',
+      'images.unsplash.com',
     ],
   },
 }

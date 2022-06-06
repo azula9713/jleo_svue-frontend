@@ -59,6 +59,6 @@ const Desc = styled.p`
 const ItemsWrapper = styled.div`
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
 `

@@ -1,0 +1,43 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: #eeeeee;
+}
+
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.ri-social-icon {
+  font-size: 1.5em;
+  margin: 0.5em 1em;
+  margin-left: 0;
+  cursor: pointer;
+}
+
+.long-arrow-right {
+  display: block;
+  /* margin: 30px auto;z */
+  width: 40px;
+  height: 20px;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+}
+
+.long-arrow-right {
+  transform: rotate(135deg);
+}
+
+.long-arrow-right::after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 45px;
+  background-color: black;
+  transform: rotate(-45deg) translate(15px, 4px);
+  left: 0;
+  top: 0;
+}

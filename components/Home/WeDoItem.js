@@ -2,11 +2,18 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 const WeDoItem = ({ item }) => {
+  const imgWidth = 340
   return (
     <ItemContainer>
       <ItemTitle>{item.title}</ItemTitle>
       <ItemData>
-        <Image src={item.image} alt={item.title} height={200} width={340} />
+        <Image
+          src={item.image}
+          alt={item.title}
+          height={imgWidth + item.id * 50}
+          width={imgWidth}
+          objectFit="cover"
+        />
       </ItemData>
     </ItemContainer>
   )
@@ -17,11 +24,16 @@ export default WeDoItem
 const ItemContainer = styled.div`
   width: 100%;
   border: ${(props) => props.theme.borderSecondary};
+  border-right: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2.5rem;
+
+  &:last-child {
+    border-right: ${(props) => props.theme.borderSecondary};
+  }
 `
 const ItemTitle = styled.h4`
   margin: 0;
@@ -35,5 +47,5 @@ const ItemTitle = styled.h4`
 `
 const ItemData = styled.div`
   margin-top: 5rem;
-  margin-bottom: 10rem;
+  margin-bottom: 4rem;
 `

@@ -8,7 +8,7 @@ import {
 } from 'react-icons/ri'
 
 import FooterLocale from '../../data/lang/Footer-en.json'
-import { customStyles } from '../../styles/customStyles'
+import { customStyles } from '../../styles/js/customStyles'
 
 const Footer = () => {
   return (
@@ -55,6 +55,7 @@ const FooterContainer = styled.footer`
   background-color: ${(props) => props.theme.bgPrimary};
   height: 25em;
   border-top: ${(props) => props.theme.borderPrimary};
+  box-sizing: border-box;
 `
 
 const FooterWrapper = styled.div`
