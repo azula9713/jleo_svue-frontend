@@ -82,7 +82,6 @@ const Subtitle = styled.h3`
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.5rem;
-  line-height: 1.5rem;
   color: ${(props) => props.theme.textPrimary};
 `
 const Desc = styled.p`
