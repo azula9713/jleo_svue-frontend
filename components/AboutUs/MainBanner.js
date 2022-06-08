@@ -52,15 +52,6 @@ const MainImageSection = styled.div`
   align-items: center;
 `
 
-// const MainImage = styled.img`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// `
-
 const MainImage = styled(Image)`
   height: 100%;
   width: 100%;
