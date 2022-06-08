@@ -12,5 +12,9 @@
   "ourWork": {
     "title": "Our Work",
     "navigatingText": "View our work"
+  },
+  "ourStories": {
+    "title": "Our Stories",
+    "ctaText": "Go to article"
   }
 }
