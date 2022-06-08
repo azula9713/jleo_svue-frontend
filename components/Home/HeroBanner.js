@@ -26,6 +26,8 @@ const HeroSection = styled.section`
   justify-content: space-between;
   height: calc(100vh - 8rem);
   background-color: ${(props) => props.theme.bgPrimary};
+  padding: 0 2rem;
+  margin-top: 2rem;
 `
 
 const CtaContainer = styled.div`

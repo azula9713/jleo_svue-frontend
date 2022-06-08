@@ -12,5 +12,18 @@
   "ourWork": {
     "title": "Our Work",
     "navigatingText": "View our work"
+  },
+  "ourStories": {
+    "title": "Our Stories",
+    "ctaText": "Go to article",
+    "prevBtn": "Previous",
+    "nextBtn": "Next"
+  },
+  "getStarted": {
+    "title": "Let's Get Started",
+    "subTitleQuote": "Start with a free quote",
+    "subTitleAppointment": "Let's get you an appointment",
+    "quoteDesc": "We will provide you with an estimate based on the data you enter so you can find the right fit for your place.",
+    "appointmentDesc": "Set up an appointment with us so we can take a look at your place and give you the best estimate."
   }
 }
