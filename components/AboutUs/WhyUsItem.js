@@ -27,7 +27,24 @@ const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   padding: 2.5rem;
+`
+const ItemTitle = styled.h4`
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: ${(props) => props.theme.textPrimary};
+  width: 100%;
+`
+const ItemData = styled.div`
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 `
 const ItemDesc = styled.p`
   font-weight: 400;
@@ -35,22 +52,5 @@ const ItemDesc = styled.p`
   line-height: 1.3rem;
   color: ${(props) => props.theme.textPrimary};
   margin-bottom: 1.1rem;
-  max-width: 20rem;
-`
-
-const ItemTitle = styled.h4`
-  margin: 0;
-  font-weight: 600;
-  letter-spacing: 0.3rem;
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  text-align: left;
-  color: ${(props) => props.theme.textPrimary};
-  max-width: 20rem;
-`
-const ItemData = styled.div`
-  margin-top: 5rem;
-  margin-bottom: 4rem;
-  display: flex;
-  flex-direction: row;
+  width: 70%;
 `

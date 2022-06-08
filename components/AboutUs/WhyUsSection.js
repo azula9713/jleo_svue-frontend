@@ -32,12 +32,9 @@ const Info = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  border: ${(props) => props.theme.borderSecondary};
-  border-bottom: none;
 `
 
 const Desc = styled.p`
-  max-width: 68.5rem;
   margin: 0;
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -51,7 +48,7 @@ const Desc = styled.p`
 const ItemsWrapper = styled.div`
   width: 90%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  overflow-x: scroll;
 `
