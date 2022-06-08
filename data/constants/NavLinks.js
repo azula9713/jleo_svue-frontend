@@ -22,7 +22,7 @@ const NavLinks = [
   {
     id: 5,
     name: 'About Us',
-    link: '/about.us',
+    link: '/aboutus',
   },
 ]
 
