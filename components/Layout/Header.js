@@ -6,7 +6,7 @@ import HeaderButton from '../Common/HeaderButton'
 import MegaMenu from './MegaMenu'
 import { useRecoilState } from 'recoil'
 import { hoveredNavAtom } from '../../atoms/headerAtom'
-import defaultTheme from '../../styles/themeConfig'
+import defaultTheme from '../../styles/js/themeConfig'
 
 const Header = () => {
   const [hoveredTitle, setHoveredTitle] = useRecoilState(hoveredNavAtom)

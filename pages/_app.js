@@ -1,8 +1,8 @@
 import { RecoilRoot } from 'recoil'
 import { ThemeProvider } from 'styled-components'
 
-import '../styles/globals.css'
-import defaultTheme from '../styles/themeConfig'
+import '../styles/css/globals.css'
+import defaultTheme from '../styles/js/themeConfig'
 
 function MyApp({ Component, pageProps }) {
   return (

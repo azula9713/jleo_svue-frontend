@@ -1,14 +1,19 @@
 import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
+import { useSetRecoilState } from 'recoil'
 import styled, { css } from 'styled-components'
-import { IoArrowForward, IoArrowBack } from 'react-icons/io5'
 
-const HeroSlider = ({ slides }) => {
+import { hoveredPortfolioAtom } from '../../atoms/miniPortfolioAtom'
+
+const HeroSlider = ({ slides, isPortfolio, current }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const setCurrSlide = useSetRecoilState(hoveredPortfolioAtom)
   const timeout = useRef(null)
 
   const length = slides.length
 
   function nextSlide() {
+    clearTimeout(timeout.current)
     setCurrentSlide(currentSlide === length - 1 ? 0 : currentSlide + 1)
   }
 
@@ -21,10 +26,20 @@ const HeroSlider = ({ slides }) => {
     clearTimeout(timeout.current)
     timeout.current = setTimeout(nextSlide, 5000)
 
+    if (isPortfolio) {
+      setCurrSlide(currentSlide)
+    }
+
     return () => clearTimeout(timeout.current)
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSlide, length])
+
+  useEffect(() => {
+    if (isPortfolio) {
+      setCurrentSlide(current)
+    }
+  }, [current])
 
   if (!Array.isArray(slides) || slides.length === 0) {
     return null
@@ -37,7 +52,7 @@ const HeroSlider = ({ slides }) => {
           <HeroSlide key={index}>
             {index === currentSlide && (
               <Slider>
-                <HeroImage src={slide.image} alt={slide.alt} />
+                <HeroImage src={slide.image} alt={slide.alt} layout="fill" />
               </Slider>
             )}
           </HeroSlide>
@@ -92,13 +107,22 @@ const HeroSlide = styled.div`
   height: 100%;
 `
 
-const HeroImage = styled.img`
+const HeroImage = styled(Image)`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  animation: fadeIn 0.9s ease-in-out;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `
 
 const Slider = styled.div`
@@ -121,7 +145,6 @@ const Slider = styled.div`
     left: 0;
     opacity: 0.5;
     overflow: hidden;
-    //add linear-gradient background
     background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.4) 0%,

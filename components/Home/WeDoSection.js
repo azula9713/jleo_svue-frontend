@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import WeDoItem from './WeDoItem'
+import SectionTitle from '../Common/SectionTitle'
 
 import WeDoData from '../../data/constants/WeDoItems'
 import HomeLocale from '../../data/lang/Home-en.json'
@@ -9,7 +10,7 @@ const WeDoSection = () => {
   return (
     <>
       <Info>
-        <Title>{HomeLocale.weDo.title}</Title>
+        <SectionTitle title={HomeLocale.weDo.title} />
         <Desc>{HomeLocale.weDo.desc}</Desc>
       </Info>
       <ItemsWrapper>
@@ -24,8 +25,8 @@ const WeDoSection = () => {
 export default WeDoSection
 
 const Info = styled.div`
-  padding: 2rem 6rem;
   margin-top: 2rem;
+  padding: 2rem 6rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -58,6 +59,6 @@ const Desc = styled.p`
 const ItemsWrapper = styled.div`
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
 `

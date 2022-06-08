@@ -59,7 +59,6 @@ const Container = styled.div`
 
 const ButtonLabel = styled.span`
   color: ${({ textClr }) => textClr};
-  //make sure text is one line
   white-space: nowrap;
   overflow: hidden;
   margin-right: 0.7rem;
