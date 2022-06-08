@@ -82,7 +82,6 @@ const Subtitle = styled.h3`
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.5rem;
-  line-height: 1.5rem;
   color: ${(props) => props.theme.textPrimary};
 `
 const Desc = styled.p`
@@ -91,6 +90,11 @@ const Desc = styled.p`
   color: ${(props) => props.theme.textPrimary};
   font-weight: 400;
   font-size: 1rem;
+
+  @media (max-width: 1400px) {
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+  }
 `
 const CTABtn = styled.div`
   margin: 3rem 0;

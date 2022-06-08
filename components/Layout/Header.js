@@ -85,7 +85,7 @@ const HeaderSection = styled.header`
 `
 
 const LinkContainer = styled.div`
-  width: 60%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -98,6 +98,7 @@ const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
 `
 
 const NavLinkContainer = styled.nav`
@@ -112,6 +113,8 @@ const NavLinkItem = styled.a`
   color: ${(props) => props.theme.textPrimary};
   margin: 0 1.1rem;
   cursor: pointer;
+  //make sure text is single line
+  white-space: nowrap;
 `
 
 const ButtonContainer = styled(NavLinkContainer)`
@@ -119,4 +122,5 @@ const ButtonContainer = styled(NavLinkContainer)`
   padding: 0;
   width: max-content;
   margin-right: 0.1rem;
+  width: 30%;
 `
