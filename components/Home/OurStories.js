@@ -16,13 +16,16 @@ const OurStories = () => {
           <BlogPost post={BlogPosts[0]} />
         </BlogPostContainer>
         <PaginationContainer>
-          <PaginationButtons>Prev Next</PaginationButtons>
+          <PaginationButtons>
+            <PrevButton>{HomeLocale.ourStories.prevBtn}</PrevButton>
+            <NextButton>{HomeLocale.ourStories.nextBtn}</NextButton>
+          </PaginationButtons>
           <PaginationDots>. . . .</PaginationDots>
         </PaginationContainer>
       </DescWrapper>
       <ImageWrapper>
         <StoryImage
-          height={916}
+          height={920}
           width={920}
           src="/stories.png"
           objectFit="cover"
@@ -35,12 +38,10 @@ const OurStories = () => {
 export default OurStories
 
 const OurStoriesContainer = styled.section`
-  margin-bottom: 2rem;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  height: 45rem;
 `
 const DescWrapper = styled.div`
   width: 50%;
@@ -64,7 +65,7 @@ const BlogPostContainer = styled.div`
 `
 
 const PaginationContainer = styled.div`
-  height: 30%;
+  height: 15rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -77,9 +78,27 @@ const StoryImage = styled(Image)`
 `
 const PaginationButtons = styled.div`
   margin-right: 2rem;
-  width: 100%;
 `
 
 const PaginationDots = styled.div`
   margin-right: 2rem;
 `
+const PrevButton = styled.button`
+  color: ${(props) => props.theme.textPrimary};
+  cursor: pointer;
+  background: transparent;
+  margin-right: 1rem;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  line-height: 1rem;
+
+  &:hover {
+    color: ${(props) => props.theme.black};
+  }
+`
+
+const NextButton = styled(PrevButton)``

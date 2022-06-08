@@ -32,8 +32,6 @@ const OurWork = () => {
 export default OurWork
 
 const OurWorkContainer = styled.section`
-  margin-bottom: 2rem;
-  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

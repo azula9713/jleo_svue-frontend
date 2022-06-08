@@ -25,8 +25,8 @@ const WeDoSection = () => {
 export default WeDoSection
 
 const Info = styled.div`
-  padding: 2rem 6rem;
   margin-top: 2rem;
+  padding: 2rem 6rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
