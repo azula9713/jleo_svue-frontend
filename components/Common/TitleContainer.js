@@ -14,4 +14,8 @@ export default TitleContainer
 
 const Container = styled.div`
   padding: 2rem;
+
+  @media (max-width: 1400px) {
+    padding: 2rem 1.5rem;
+  }
 `

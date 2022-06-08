@@ -24,12 +24,7 @@ const OurStories = () => {
         </PaginationContainer>
       </DescWrapper>
       <ImageWrapper>
-        <StoryImage
-          height={920}
-          width={920}
-          src="/stories.png"
-          objectFit="cover"
-        />
+        <StoryImage layout="fill" src="/stories.png" objectFit="cover" />
       </ImageWrapper>
     </OurStoriesContainer>
   )
@@ -55,21 +50,26 @@ const DescWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   width: 50%;
-  height: 100%;
+  height: 46rem;
+  position: relative;
 `
 const BlogPostContainer = styled.div`
-  height: 40%;
+  height: 22rem;
   width: 100%;
   border: ${(props) => props.theme.borderSecondary};
+  border-bottom: none;
   padding: 3rem;
 `
 
 const PaginationContainer = styled.div`
-  height: 15rem;
+  height: 10rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  border: ${(props) => props.theme.borderSecondary};
+  border-top: none;
+  border-bottom: none;
 `
 
 const StoryImage = styled(Image)`

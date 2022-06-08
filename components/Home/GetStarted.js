@@ -91,6 +91,11 @@ const Desc = styled.p`
   color: ${(props) => props.theme.textPrimary};
   font-weight: 400;
   font-size: 1rem;
+
+  @media (max-width: 1400px) {
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+  }
 `
 const CTABtn = styled.div`
   margin: 3rem 0;
