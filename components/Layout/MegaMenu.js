@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import { Fade } from 'react-reveal'
 import { useSetRecoilState } from 'recoil'
+
 import { hoveredNavAtom } from '../../atoms/headerAtom'
+import MenuItem from './MenuItem'
 
 const MegaMenu = ({ menuTitle }) => {
   const setHoveredTitle = useSetRecoilState(hoveredNavAtom)
@@ -15,7 +17,7 @@ const MegaMenu = ({ menuTitle }) => {
             setHoveredTitle('')
           }}
         >
-          {menuTitle}
+          <MenuItem navItem={menuTitle} />
         </Wrapper>
       </Fade>
     </MegaMenuContainer>

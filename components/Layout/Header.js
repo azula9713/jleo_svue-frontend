@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import Image from 'next/image'
 import styled from 'styled-components'
 import NavLinks from '../../data/constants/NavLinks'
@@ -9,13 +10,19 @@ import { hoveredNavAtom } from '../../atoms/headerAtom'
 import defaultTheme from '../../styles/js/themeConfig'
 
 const Header = () => {
+  const router = useRouter()
+
   const [hoveredTitle, setHoveredTitle] = useRecoilState(hoveredNavAtom)
 
   return (
     <Headbar>
       <HeaderSection>
         <LinkContainer>
-          <ImageContainer>
+          <ImageContainer
+            onClick={() => {
+              router.push('/')
+            }}
+          >
             <Image
               src="/logojleo.svg"
               alt="J'LEO SVUE"
@@ -99,6 +106,7 @@ const ImageContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   position: relative;
+  cursor: pointer;
 `
 
 const NavLinkContainer = styled.nav`
