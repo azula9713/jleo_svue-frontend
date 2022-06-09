@@ -16,6 +16,7 @@
     "react-dom": "18.1.0",
     "react-icons": "^4.4.0",
     "react-reveal": "^1.2.2",
+    "react-scroll-to-top": "^1.0.8",
     "recoil": "^0.7.3-alpha.2",
     "styled-components": "^5.3.5"
   },

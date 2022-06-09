@@ -1,5 +1,7 @@
 import Head from 'next/head'
+import ScrollToTop from 'react-scroll-to-top'
 import styled from 'styled-components'
+
 import GetStarted from '../components/Home/GetStarted'
 import HeroBanner from '../components/Home/HeroBanner'
 import OurStories from '../components/Home/OurStories'
@@ -7,6 +9,8 @@ import OurWork from '../components/Home/OurWork'
 import WeDoSection from '../components/Home/WeDoSection'
 import Footer from '../components/Layout/Footer'
 import Header from '../components/Layout/Header'
+
+import defaultTheme from '../styles/js/themeConfig'
 
 export default function Home() {
   return (
@@ -16,6 +20,7 @@ export default function Home() {
       </Head>
       <Header />
       <Main>
+        <ScrollToTop smooth color={defaultTheme.secondary} />
         <HeroBanner />
         <WeDoSection />
         <OurWork />

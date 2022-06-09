@@ -12,15 +12,15 @@ const MenuItem = ({ navItem }) => {
         <Title>{navItem}</Title>
         <MenuLinks>
           {menuLinks?.links?.map((item, index) => {
-            if (!item.isExpandable) {
-              return (
-                <LinkItem key={index} href={item.link}>
-                  {item.name}
-                </LinkItem>
-              )
+            if (item.isExpandable) {
+              return <Item key={index}>{item.name}</Item>
             }
 
-            return <Item key={index}>{item.name}</Item>
+            return (
+              <LinkItem key={index} href={item.link}>
+                {item.name}
+              </LinkItem>
+            )
           })}
         </MenuLinks>
       </DataSection>
