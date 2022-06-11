@@ -6,16 +6,14 @@ import { useRecoilState, useSetRecoilState } from 'recoil'
 import LayeredItems from './LayeredItems'
 
 import {
-  MegaMenuItems,
-  SecondLayerItems,
-  ThirdLayerItems,
-} from '../../data/constants/MegaMenuItems'
-import {
   firstLayerAtom,
   secondLayerAtom,
   thirdLayerAtom,
 } from '../../atoms/headerAtom'
 import { MenuLayerStructure } from '../../data/constants/LayerStructure'
+import { MegaMenuItems } from '../../data/constants/MegaMenuItems'
+import { SecondLayerItems } from '../../data/constants/SecondLayerItems'
+import { ThirdLayerItems } from '../../data/constants/ThirdLayerItems'
 
 const MenuItem = ({ navItem }) => {
   const [firstLayer, setFirstLayer] = useRecoilState(firstLayerAtom)
