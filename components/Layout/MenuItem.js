@@ -11,9 +11,9 @@ import {
   thirdLayerAtom,
 } from '../../atoms/headerAtom'
 import { MenuLayerStructure } from '../../data/constants/LayerStructure'
-import { MegaMenuItems } from '../../data/constants/MegaMenuItems'
-import { SecondLayerItems } from '../../data/constants/SecondLayerItems'
-import { ThirdLayerItems } from '../../data/constants/ThirdLayerItems'
+import MegaMenuItems from '../../data/constants/json/MegaMenuItems.json'
+import SecondLayerItems from '../../data/constants/json/SecondLayerItems.json'
+import ThirdLayerItems from '../../data/constants/json/ThirdLayerItems.json'
 
 const MenuItem = ({ navItem }) => {
   const [firstLayer, setFirstLayer] = useRecoilState(firstLayerAtom)
