@@ -112,8 +112,84 @@ const SecondLayerItems = {
       },
     ],
   },
+  '/interiors/residential': {
+    name: 'Residential',
+    links: [
+      {
+        name: 'Home Office',
+        isExpandable: false,
+        link: '/interiors/residential/home-office',
+      },
+      {
+        name: 'Bedroom',
+        isExpandable: false,
+        link: '/interiors/residential/bedroom',
+      },
+      {
+        name: 'Living Area',
+        isExpandable: false,
+        link: '/interiors/residential/living-area',
+      },
+      {
+        name: 'Kitchen',
+        isExpandable: false,
+        link: '/interiors/residential/kitchen',
+      },
+      {
+        name: 'Games Room',
+        isExpandable: false,
+        link: '/interiors/residential/games-room',
+      },
+      {
+        name: 'Pantry/Storage',
+        isExpandable: false,
+        link: '/interiors/residential/pantry-storage',
+      },
+    ],
+  },
 }
 
-const ThirdLayerItems = {}
+const ThirdLayerItems = {
+  '/architecture/services/residential': {
+    name: 'Residential',
+    links: [
+      {
+        name: 'Single Storey',
+        isExpandable: false,
+        link: '/architecture/services/residential/single-storey',
+      },
+      {
+        name: 'Double Storey',
+        isExpandable: false,
+        link: '/architecture/services/residential/double-storey',
+      },
+      {
+        name: 'Loft Conversion',
+        isExpandable: false,
+        link: '/architecture/services/residential/loft-conversion',
+      },
+      {
+        name: 'Wrap Around',
+        isExpandable: false,
+        link: '/architecture/services/residential/wrap-around',
+      },
+      {
+        name: 'Kitchen',
+        isExpandable: false,
+        link: '/architecture/services/residential/kitchen',
+      },
+      {
+        name: 'Basement Conversion',
+        isExpandable: false,
+        link: '/architecture/services/residential/basement-conversion',
+      },
+      {
+        name: 'Flat Conversion',
+        isExpandable: false,
+        link: '/architecture/services/residential/flat-conversion',
+      },
+    ],
+  },
+}
 
 export { MegaMenuItems, SecondLayerItems, ThirdLayerItems }

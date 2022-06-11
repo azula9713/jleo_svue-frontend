@@ -90,6 +90,9 @@ const LayeredItems = ({ menuLinks, layerPosition }) => {
                 if (layerPosition === MenuLayerStructure.secondLayer) {
                   setSecondLayer(item.link)
                 }
+                if (layerPosition === MenuLayerStructure.thirdLayer) {
+                  setThirdLayer(item.link)
+                }
               }}
             >
               {item.name}
@@ -122,12 +125,12 @@ export default LayeredItems
 const LayerItems = styled.div`
   display: ${({ visible }) => (visible ? 'block' : 'none')};
   width: ${({ layerPosition }) =>
-    layerPosition === MenuLayerStructure.firstLayer ? '10rem' : '13rem'};
+    layerPosition === MenuLayerStructure.firstLayer ? '13rem' : '15rem'};
   padding: 1rem;
   height: 100%;
   border: ${({ theme }) => theme.borderSecondary};
   border-top: none;
-  border-left: none;
+  border-right: none;
 `
 
 const LinkItem = styled.div`
