@@ -1,7 +1,9 @@
 import styled from 'styled-components'
+
+import HeaderButton from '../Common/HeaderButton'
+
 import HomeLocale from '../../data/lang/Home-en.json'
 import defaultTheme from '../../styles/js/themeConfig'
-import HeaderButton from '../Common/HeaderButton'
 
 const CTASection = () => {
   return (

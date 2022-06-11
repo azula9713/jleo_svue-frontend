@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { useRecoilState } from 'recoil'
 import styled from 'styled-components'
-import NavLinks from '../../data/constants/NavLinks'
+
 import HeaderButton from '../Common/HeaderButton'
 import MegaMenu from './MegaMenu'
-import { useRecoilState } from 'recoil'
+
+import NavLinks from '../../data/constants/NavLinks'
 import { hoveredNavAtom } from '../../atoms/headerAtom'
 import defaultTheme from '../../styles/js/themeConfig'
 

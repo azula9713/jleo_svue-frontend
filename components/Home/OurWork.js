@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-
 import { useRecoilValue } from 'recoil'
+
 import SectionTitle from '../Common/SectionTitle'
 import HeroSlider from './HeroSlider'
 import OurWorkTabs from './OurWorkTabs'
