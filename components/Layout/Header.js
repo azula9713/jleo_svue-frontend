@@ -63,7 +63,7 @@ const Header = () => {
           />
         </ButtonContainer>
       </HeaderSection>
-      {/* add a revealing effect to mega menu */}
+
       {hoveredTitle !== '' && <MegaMenu menuTitle={hoveredTitle} />}
     </Headbar>
   )
@@ -123,7 +123,6 @@ const NavLinkItem = styled.a`
   color: ${(props) => props.theme.textPrimary};
   margin: 0 1.1rem;
   cursor: pointer;
-  //make sure text is single line
   white-space: nowrap;
 `
 
