@@ -1,21 +1,30 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { useRecoilState } from 'recoil'
 import styled from 'styled-components'
-import NavLinks from '../../data/constants/NavLinks'
+
 import HeaderButton from '../Common/HeaderButton'
 import MegaMenu from './MegaMenu'
-import { useRecoilState } from 'recoil'
+
+import NavLinks from '../../data/constants/NavLinks'
 import { hoveredNavAtom } from '../../atoms/headerAtom'
 import defaultTheme from '../../styles/js/themeConfig'
 
 const Header = () => {
+  const router = useRouter()
+
   const [hoveredTitle, setHoveredTitle] = useRecoilState(hoveredNavAtom)
 
   return (
     <Headbar>
       <HeaderSection>
         <LinkContainer>
-          <ImageContainer>
+          <ImageContainer
+            onClick={() => {
+              router.push('/')
+            }}
+          >
             <Image
               src="/logojleo.svg"
               alt="J'LEO SVUE"
@@ -54,7 +63,7 @@ const Header = () => {
           />
         </ButtonContainer>
       </HeaderSection>
-      {/* add a revealing effect to mega menu */}
+
       {hoveredTitle !== '' && <MegaMenu menuTitle={hoveredTitle} />}
     </Headbar>
   )
@@ -99,6 +108,7 @@ const ImageContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   position: relative;
+  cursor: pointer;
 `
 
 const NavLinkContainer = styled.nav`
@@ -113,7 +123,6 @@ const NavLinkItem = styled.a`
   color: ${(props) => props.theme.textPrimary};
   margin: 0 1.1rem;
   cursor: pointer;
-  //make sure text is single line
   white-space: nowrap;
 `
 
