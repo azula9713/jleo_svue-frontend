@@ -27,6 +27,5 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 2rem;
   width: 100%;
 `

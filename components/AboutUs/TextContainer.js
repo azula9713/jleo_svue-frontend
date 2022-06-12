@@ -35,4 +35,5 @@ const Desc = styled.p`
   margin-bottom: 1.1rem;
   width: 80%;
   text-align: justify;
+  color: #fdfdfd;
 `

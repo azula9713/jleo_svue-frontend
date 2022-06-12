@@ -15,8 +15,8 @@ const MainBanner = () => {
           src={aboutUsData.mainImage}
           alt={aboutUsData.mainImageAlt}
           objectFit="cover"
-          height={100}
-          width={100}
+          height={684}
+          width={1000}
         />
       </MainImageSection>
     </MainSection>
@@ -42,6 +42,7 @@ const TextSection = styled.div`
   width: 55%;
   height: 100%;
   padding: 2rem 3rem;
+  background-image: linear-gradient(to right, #9e9e9e, #312e2b);
 `
 
 const MainImageSection = styled.div`
