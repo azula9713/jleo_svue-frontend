@@ -16,13 +16,18 @@ const NavLinks = [
   },
   {
     id: 4,
-    name: 'Careers',
-    link: '/careers',
+    name: 'About',
+    link: '/about',
   },
   {
     id: 5,
     name: 'About Us',
     link: '/aboutus',
+  },
+  {
+    id: 6,
+    name: 'Contact Us',
+    link: '/contact-us',
   },
 ]
 
