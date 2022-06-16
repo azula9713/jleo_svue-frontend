@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import CTASection from './CTASection'
 import HeroSlider from './HeroSlider'
 
-import sldierData from '../../data/constants/SliderData'
+import sliderData from '../../data/constants/SliderData'
 
 const HeroBanner = () => {
   return (
@@ -12,7 +12,7 @@ const HeroBanner = () => {
         <CTASection />
       </CtaContainer>
       <SliderContainer>
-        <HeroSlider slides={sldierData} />
+        <HeroSlider slides={sliderData} />
       </SliderContainer>
     </HeroSection>
   )

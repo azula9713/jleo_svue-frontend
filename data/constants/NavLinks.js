@@ -16,8 +16,8 @@ const NavLinks = [
   },
   {
     id: 4,
-    name: 'About',
-    link: '/about',
+    name: 'About Us',
+    link: '/aboutus',
   },
   {
     id: 5,
