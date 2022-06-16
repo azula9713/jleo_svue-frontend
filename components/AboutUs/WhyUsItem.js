@@ -28,7 +28,7 @@ const ItemContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 2.5rem;
+  padding: 2rem 2.5rem;
 `
 const ItemTitle = styled.h4`
   margin: 0;
@@ -40,7 +40,7 @@ const ItemTitle = styled.h4`
   width: 100%;
 `
 const ItemData = styled.div`
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
