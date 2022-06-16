@@ -19,25 +19,15 @@ export default function Home() {
         <title>J&apos;LEO SVUE</title>
       </Head>
       <Header />
-      <Main>
+      <main className="main">
         <ScrollToTop smooth color={defaultTheme.secondary} />
         <HeroBanner />
         <WeDoSection />
         <OurWork />
         <OurStories />
         <GetStarted />
-      </Main>
-
+      </main>
       <Footer />
     </>
   )
 }
-
-const Main = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 2rem;
-  margin-bottom: 0;
-`
