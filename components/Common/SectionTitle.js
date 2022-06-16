@@ -7,7 +7,6 @@ const SectionTitle = ({ title }) => {
 export default SectionTitle
 
 const Title = styled.h2`
-  margin: 0;
   text-transform: uppercase;
   color: ${(props) => props.theme.textSecondary};
   font-weight: 700;
