@@ -51,4 +51,5 @@ const ItemsWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 `
