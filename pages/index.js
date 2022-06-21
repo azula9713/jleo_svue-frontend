@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import ScrollToTop from 'react-scroll-to-top'
-import styled from 'styled-components'
 
 import GetStarted from '../components/Home/GetStarted'
 import HeroBanner from '../components/Home/HeroBanner'
