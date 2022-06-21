@@ -64,6 +64,12 @@ const CTA = styled.div`
   font-size: 0.9rem;
   font-weight: 700;
   padding: 1.4rem 2.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: ${(props) => props.theme.primaryDark};
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     width: 100%;
