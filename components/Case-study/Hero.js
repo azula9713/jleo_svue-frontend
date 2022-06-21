@@ -36,6 +36,12 @@ const HeroContainer = styled.section`
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding: 2rem 1rem;
+    height: 40rem;
+    justify-content: center;
+  }
 `
 
 const Info = styled.div`
@@ -43,6 +49,10 @@ const Info = styled.div`
   width: 100%;
   background-image: linear-gradient(to right, #696969, #312e2b);
   padding: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding: 2rem 1rem;
+  }
 `
 
 const Title = styled.h1`
@@ -53,4 +63,8 @@ const Title = styled.h1`
   letter-spacing: 0.35em;
   font-size: 2.5rem;
   margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: 1.1rem;
+  }
 `

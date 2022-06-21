@@ -4,6 +4,7 @@ import Footer from '../components/Layout/Footer'
 import Header from '../components/Layout/Header'
 import WhyUsSection from '../components/AboutUs/WhyUsSection'
 import LetsTalk from '../components/Common/LetsTalk'
+import styled from 'styled-components'
 
 export default function AboutUs() {
   return (
@@ -12,12 +13,25 @@ export default function AboutUs() {
         <title>J&apos;LEO SVUE - About Us</title>
       </Head>
       <Header />
-      <main className="main">
+      <MainSection>
         <MainBanner />
         <WhyUsSection />
         <LetsTalk />
-      </main>
+      </MainSection>
       <Footer />
     </>
   )
 }
+
+const MainSection = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  margin-bottom: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    margin: 1rem;
+  }
+`
