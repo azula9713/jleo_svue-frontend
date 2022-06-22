@@ -35,7 +35,7 @@ const LetsTalkContainer = styled.section`
     background-color: rgba(0, 0, 0, 0.3);
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     padding: 0 2rem;
     flex-direction: column;
     align-items: flex-start;
@@ -71,7 +71,7 @@ const CTA = styled.div`
     background-color: ${(props) => props.theme.primaryDark};
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     width: 100%;
     text-align: center;
   }
