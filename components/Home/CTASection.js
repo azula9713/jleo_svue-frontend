@@ -83,5 +83,6 @@ const ActionContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     height: 100%;
+    width: 100%;
   }
 `

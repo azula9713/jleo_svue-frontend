@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Image from 'next/image'
 
 import CTASection from './CTASection'
 import HeroSlider from './HeroSlider'
@@ -8,6 +9,9 @@ import sliderData from '../../data/constants/SliderData'
 const HeroBanner = () => {
   return (
     <HeroSection>
+      <MobileHeroBg>
+        <HeroImage layout="fill" src="/stories.png" objectFit="cover" />
+      </MobileHeroBg>
       <CtaContainer>
         <CTASection />
       </CtaContainer>
@@ -30,10 +34,23 @@ const HeroSection = styled.section`
   padding: 0 2rem;
   margin-top: 2rem;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     padding: 0 0.2rem;
-    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: max-content;
   }
+`
+
+const MobileHeroBg = styled.div`
+  position: relative;
+  width: 100%;
+  height: calc(100vh / 3);
+`
+
+const HeroImage = styled(Image)`
+  height: 100%;
+  width: 100%;
 `
 
 const CtaContainer = styled.div`
@@ -45,10 +62,11 @@ const CtaContainer = styled.div`
   width: 48%;
   height: 90%;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     width: 100%;
     justify-content: flex-start;
     height: max-content;
+    border: none;
   }
 `
 
@@ -56,7 +74,7 @@ const SliderContainer = styled.div`
   width: 48%;
   height: calc(100vh - 8rem);
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     display: none;
   }
 `

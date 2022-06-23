@@ -59,6 +59,7 @@ const Container = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
     padding: 1.4rem 1rem;
+    width: 100%;
 
     &::after {
       left: 1rem;
@@ -66,7 +67,13 @@ const Container = styled.div`
     }
   }
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    margin: 0 1rem;
+    width: 100;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    margin: 0;
     margin-bottom: 1rem;
     width: 100;
   }
