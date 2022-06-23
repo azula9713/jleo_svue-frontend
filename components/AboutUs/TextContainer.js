@@ -21,7 +21,7 @@ const TextWrapper = styled.div`
 
 const Title = styled.h1`
   font-weight: 700;
-  font-size: 6.5em;
+  font-size: 4em;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: #fdfdfd;

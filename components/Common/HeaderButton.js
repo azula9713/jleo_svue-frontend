@@ -56,6 +56,15 @@ const Container = styled.div`
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
+    padding: 1.4rem 1rem;
+
+    &::after {
+      left: 1rem;
+      right: 0.2rem;
+    }
+  }
 `
 
 const ButtonLabel = styled.span`
@@ -69,7 +78,8 @@ const ButtonLabel = styled.span`
   letter-spacing: 0.05rem;
   transition: all 0.3s ease-in-out;
 
-  @media (max-width: 1600px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
     font-size: 0.8rem;
+    margin-right: 0.4rem;
   }
 `

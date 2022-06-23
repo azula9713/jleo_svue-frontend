@@ -11,12 +11,11 @@ const MainBanner = () => {
         <TextContainer />
       </TextSection>
       <MainImageSection>
-        <MainImage
+        <Image
           src={aboutUsData.mainImage}
           alt={aboutUsData.mainImageAlt}
           objectFit="cover"
-          height={684}
-          width={1000}
+          layout="fill"
         />
       </MainImageSection>
     </MainSection>
@@ -30,7 +29,7 @@ const MainSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
+  height: 35rem;
   background-color: ${(props) => props.theme.bgPrimary};
 `
 
@@ -41,19 +40,12 @@ const TextSection = styled.div`
   flex-direction: column;
   width: 55%;
   height: 100%;
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
   background-image: linear-gradient(to right, #9e9e9e, #312e2b);
 `
 
 const MainImageSection = styled.div`
   width: 45%;
   height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-`
-
-const MainImage = styled(Image)`
-  height: 100%;
-  width: 100%;
+  position: relative;
 `

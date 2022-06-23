@@ -25,8 +25,8 @@ const WhyUsSection = () => {
 export default WhyUsSection
 
 const Info = styled.div`
-  padding: 2rem 6rem;
-  margin-top: 2rem;
+  padding: 1rem 6rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,8 +36,7 @@ const Info = styled.div`
 
 const Desc = styled.p`
   margin: 0;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
   font-weight: 400;
   font-size: 1.1rem;
   text-align: center;

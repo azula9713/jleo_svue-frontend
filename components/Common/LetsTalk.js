@@ -34,6 +34,13 @@ const LetsTalkContainer = styled.section`
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    padding: 0 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
 `
 const Title = styled.h3`
   color: ${(props) => props.theme.white};
@@ -42,6 +49,10 @@ const Title = styled.h3`
   font-size: 4rem;
   z-index: 1;
   letter-spacing: 0.35em;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: 3rem;
+  }
 `
 
 const CTA = styled.div`
@@ -53,4 +64,15 @@ const CTA = styled.div`
   font-size: 0.9rem;
   font-weight: 700;
   padding: 1.4rem 2.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: ${(props) => props.theme.primaryDark};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    width: 100%;
+    text-align: center;
+  }
 `

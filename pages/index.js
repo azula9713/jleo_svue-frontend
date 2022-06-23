@@ -19,15 +19,28 @@ export default function Home() {
         <title>J&apos;LEO SVUE</title>
       </Head>
       <Header />
-      <main className="main">
+      <MainSection>
         <ScrollToTop smooth color={defaultTheme.secondary} />
         <HeroBanner />
         <WeDoSection />
         <OurWork />
         <OurStories />
         <GetStarted />
-      </main>
+      </MainSection>
       <Footer />
     </>
   )
 }
+
+const MainSection = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  margin-bottom: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    margin: 1rem;
+  }
+`
