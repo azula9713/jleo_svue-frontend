@@ -1,9 +1,11 @@
+import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { useRecoilState } from 'recoil'
 import styled from 'styled-components'
 import { HiMenu } from 'react-icons/hi'
+import { MdClose } from 'react-icons/md'
 
 import HeaderButton from '../Common/HeaderButton'
 import MegaMenu from './MegaMenu'
@@ -17,6 +19,7 @@ const Header = () => {
   const router = useRouter()
 
   const [hoveredTitle, setHoveredTitle] = useRecoilState(hoveredNavAtom)
+  const [mobileHeaderOpen, setMobileHeaderOpen] = useState(false)
 
   return (
     <Headbar>
@@ -50,8 +53,24 @@ const Header = () => {
             ))}
           </NavLinkContainer>
           <HamburgerMenuContainer>
-            <HiMenu className={customStyles.socialMediaIcon} />
+            <HiMenu
+              className={customStyles.socialMediaIcon}
+              onClick={() => {
+                setMobileHeaderOpen(true)
+              }}
+            />
           </HamburgerMenuContainer>
+          <BurgerNav show={mobileHeaderOpen}>
+            <CloseWrapper>
+              <CustomClose
+                onClick={() => {
+                  setMobileHeaderOpen(false)
+                }}
+              >
+                <MdClose color="#000" />
+              </CustomClose>
+            </CloseWrapper>
+          </BurgerNav>
         </LinkContainer>
         <ButtonContainer>
           <HeaderButton
@@ -81,6 +100,7 @@ const Headbar = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 9999;
 `
 
 const HeaderSection = styled.header`
@@ -175,4 +195,42 @@ const HamburgerMenuContainer = styled.div`
     align-items: center;
     justify-content: flex-end;
   }
+`
+const BurgerNav = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: ${({ theme }) => theme.white};
+  width: 20rem;
+  z-index: 9999;
+  list-style: none;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  transform: ${(props) => (props.show ? 'translateX(0)' : 'translateX(100%)')};
+  transition: transform 0.2s;
+
+  li {
+    padding: 1.5rem 0;
+    border-bottom: ${({ theme }) => theme.borderPrimary};
+
+    a {
+      font-weight: bold;
+    }
+  }
+`
+
+const CustomClose = styled.button`
+  color: #000000;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+`
+
+const CloseWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
 `
