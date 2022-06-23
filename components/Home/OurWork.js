@@ -37,6 +37,10 @@ const OurWorkContainer = styled.section`
   align-items: flex-start;
   justify-content: center;
   width: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    display: none;
+  }
 `
 const TitleContainer = styled.div`
   padding: 2rem 6rem;

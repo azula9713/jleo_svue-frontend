@@ -68,14 +68,14 @@ const Container = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
-    margin: 0 1rem;
-    width: 100;
+    margin: 0rem;
+    width: 100%;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     margin: 0;
     margin-bottom: 1rem;
-    width: 100;
+    width: 100%;
   }
 `
 

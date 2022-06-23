@@ -55,6 +55,10 @@ const CTASection = styled.section`
   width: 100%;
   border: ${(props) => props.theme.borderSecondary};
   border-bottom: none;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    border: none;
+  }
 `
 const CTAContainer = styled.div`
   width: 100%;
@@ -62,6 +66,10 @@ const CTAContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    flex-direction: column;
+  }
 `
 
 const Quote = styled.div`
@@ -73,10 +81,19 @@ const Quote = styled.div`
   border-top: ${(props) => props.theme.borderSecondary};
   border-right: ${(props) => props.theme.borderSecondary};
   padding: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 100%;
+    border: none;
+  }
 `
 
 const Appointment = styled(Quote)`
   border-right: none;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    border: none;
+  }
 `
 const Subtitle = styled.h3`
   text-transform: uppercase;
@@ -91,11 +108,20 @@ const Desc = styled.p`
   font-weight: 400;
   font-size: 1rem;
 
-  @media (max-width: 1400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
     line-height: 1.5rem;
     font-size: 0.9rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 100%;
   }
 `
 const CTABtn = styled.div`
   margin: 3rem 0;
+  width: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    margin: 1rem 0;
+  }
 `

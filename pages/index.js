@@ -24,7 +24,9 @@ export default function Home() {
         <HeroBanner />
         <WeDoSection />
         <OurWork />
+        {/* Mobile our work comes here */}
         <OurStories />
+        {/* Mobile our stories comes here */}
         <GetStarted />
       </MainSection>
       <Footer />

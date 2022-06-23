@@ -37,6 +37,10 @@ const OurStoriesContainer = styled.section`
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    display: none;
+  }
 `
 const DescWrapper = styled.div`
   width: 50%;
