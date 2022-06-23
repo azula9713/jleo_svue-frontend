@@ -65,6 +65,11 @@ const Container = styled.div`
       right: 0.2rem;
     }
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    margin-bottom: 1rem;
+    width: 100;
+  }
 `
 
 const ButtonLabel = styled.span`
@@ -81,5 +86,10 @@ const ButtonLabel = styled.span`
   @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
     font-size: 0.8rem;
     margin-right: 0.4rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    text-align: left;
+    width: 100%;
   }
 `

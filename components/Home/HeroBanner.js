@@ -29,6 +29,11 @@ const HeroSection = styled.section`
   background-color: ${(props) => props.theme.bgPrimary};
   padding: 0 2rem;
   margin-top: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding: 0 0.2rem;
+    align-items: flex-start;
+  }
 `
 
 const CtaContainer = styled.div`
@@ -38,11 +43,20 @@ const CtaContainer = styled.div`
   flex-direction: column;
   border: ${(props) => props.theme.borderSecondary};
   width: 48%;
-
   height: 90%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 100%;
+    justify-content: flex-start;
+    height: max-content;
+  }
 `
 
 const SliderContainer = styled.div`
   width: 48%;
   height: calc(100vh - 8rem);
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: none;
+  }
 `
