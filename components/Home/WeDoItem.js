@@ -34,6 +34,10 @@ const ItemContainer = styled.div`
   &:last-child {
     border-right: ${(props) => props.theme.borderSecondary};
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding: 1.5rem;
+  }
 `
 const ItemTitle = styled.h4`
   margin: 0;
@@ -44,8 +48,17 @@ const ItemTitle = styled.h4`
   text-align: left;
   color: ${(props) => props.theme.textPrimary};
   max-width: 20rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 100%;
+    max-width: max-content;
+  }
 `
 const ItemData = styled.div`
   margin-top: 5rem;
   margin-bottom: 4rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    margin: 1rem 0;
+  }
 `

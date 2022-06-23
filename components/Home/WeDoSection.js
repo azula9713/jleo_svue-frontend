@@ -34,15 +34,12 @@ const Info = styled.div`
   width: 100%;
   border: ${(props) => props.theme.borderSecondary};
   border-bottom: none;
-`
 
-const Title = styled.h2`
-  margin: 0;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.textSecondary};
-  font-weight: 700;
-  font-size: 6rem;
-  line-height: 8rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    padding: 1rem;
+    height: 100%;
+    margin-top: 1rem;
+  }
 `
 
 const Desc = styled.p`
@@ -54,6 +51,13 @@ const Desc = styled.p`
   text-align: justify;
   line-height: 2rem;
   color: ${(props) => props.theme.textPrimary};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 100%;
+    max-width: max-content;
+    line-height: 1.8rem;
+    text-align: left;
+  }
 `
 
 const ItemsWrapper = styled.div`
@@ -61,4 +65,9 @@ const ItemsWrapper = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 `
