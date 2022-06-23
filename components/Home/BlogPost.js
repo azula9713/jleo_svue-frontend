@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styled from 'styled-components'
 
 import HomeLocale from '../../data/lang/Home-en.json'
@@ -5,6 +6,9 @@ import HomeLocale from '../../data/lang/Home-en.json'
 const BlogPost = ({ post }) => {
   return (
     <Container>
+      <ImgPreview>
+        <Image layout="fill" src="/stories.png" objectFit="cover" />
+      </ImgPreview>
       <TitleAuthor>
         <PostTitle>{post.title}</PostTitle>
         <PostAuthor>{post.author}</PostAuthor>
@@ -28,6 +32,11 @@ const Container = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   height: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    align-items: center;
+    margin-bottom: 1rem;
+  }
 `
 
 const TitleAuthor = styled.div`
@@ -45,6 +54,23 @@ const Preview = styled.p`
   font-size: 0.9rem;
   line-height: 1.25rem;
   color: ${(props) => props.theme.textPrimary};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    display: none;
+  }
+`
+
+const ImgPreview = styled.div`
+  display: none;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    padding: 0.5rem;
+    margin: 0;
+    width: 100%;
+    height: 12rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
 `
 
 const Button = styled.div`
@@ -66,6 +92,10 @@ const Button = styled.div`
   &:hover {
     background-color: ${(props) => props.theme.primary};
     color: ${(props) => props.theme.white};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 100%;
   }
 `
 

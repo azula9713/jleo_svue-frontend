@@ -84,7 +84,7 @@ const Quote = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     width: 100%;
-    border: none;
+    padding: 1rem;
   }
 `
 
@@ -93,6 +93,8 @@ const Appointment = styled(Quote)`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     border: none;
+    border-bottom: ${(props) => props.theme.borderSecondary};
+    border-left: ${(props) => props.theme.borderSecondary};
   }
 `
 const Subtitle = styled.h3`

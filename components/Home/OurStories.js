@@ -37,10 +37,6 @@ const OurStoriesContainer = styled.section`
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
-    display: none;
-  }
 `
 const DescWrapper = styled.div`
   width: 50%;
@@ -50,12 +46,21 @@ const DescWrapper = styled.div`
   justify-content: space-between;
   flex-direction: column;
   padding-top: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 100%;
+  }
 `
 
 const ImageWrapper = styled.div`
   width: 50%;
   height: 46rem;
   position: relative;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    display: none;
+    height: 100%;
+  }
 `
 const BlogPostContainer = styled.div`
   height: 22rem;
@@ -63,6 +68,12 @@ const BlogPostContainer = styled.div`
   border: ${(props) => props.theme.borderSecondary};
   border-bottom: none;
   padding: 3rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    padding: 1rem;
+    border: none;
+    height: 100%;
+  }
 `
 
 const PaginationContainer = styled.div`
@@ -74,6 +85,13 @@ const PaginationContainer = styled.div`
   border: ${(props) => props.theme.borderSecondary};
   border-top: none;
   border-bottom: none;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    border: none;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
 `
 
 const StoryImage = styled(Image)`
@@ -82,10 +100,18 @@ const StoryImage = styled(Image)`
 `
 const PaginationButtons = styled.div`
   margin-right: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    margin-right: 0rem;
+  }
 `
 
 const PaginationDots = styled.div`
   margin-right: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    margin-right: 0rem;
+  }
 `
 const PrevButton = styled.button`
   color: ${(props) => props.theme.textPrimary};
