@@ -59,11 +59,23 @@ const Container = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
     padding: 1.4rem 1rem;
+    width: 100%;
 
     &::after {
       left: 1rem;
       right: 0.2rem;
     }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    margin: 0 1rem;
+    width: 100;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    margin: 0;
+    margin-bottom: 1rem;
+    width: 100;
   }
 `
 
@@ -81,5 +93,10 @@ const ButtonLabel = styled.span`
   @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
     font-size: 0.8rem;
     margin-right: 0.4rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    text-align: left;
+    width: 100%;
   }
 `

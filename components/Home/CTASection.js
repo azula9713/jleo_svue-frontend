@@ -37,6 +37,13 @@ export default CTASection
 const CtaWrapper = styled.div`
   padding: 2rem;
   max-width: 37rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding: 1 0.5rem;
+    max-width: max-content;
+    width: 100%;
+    height: 100%;
+  }
 `
 
 const Title = styled.h1`
@@ -48,6 +55,12 @@ const Title = styled.h1`
   text-transform: uppercase;
   text-align: left;
   letter-spacing: 0.3rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: 1.2rem;
+    letter-spacing: 1eem;
+    line-height: 2rem;
+  }
 `
 
 const Desc = styled.p`
@@ -55,10 +68,21 @@ const Desc = styled.p`
   font-size: 1.1rem;
   line-height: 1.3rem;
   color: ${(props) => props.theme.textPrimary};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: 0.9rem;
+  }
 `
 const ActionContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 3rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+  }
 `

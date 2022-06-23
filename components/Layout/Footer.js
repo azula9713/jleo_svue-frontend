@@ -56,6 +56,11 @@ const FooterContainer = styled.footer`
   height: 25em;
   border-top: ${(props) => props.theme.borderPrimary};
   box-sizing: border-box;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    height: max-content;
+    border: none;
+  }
 `
 
 const FooterWrapper = styled.div`
@@ -64,6 +69,10 @@ const FooterWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    flex-direction: column;
+  }
 `
 
 const LogoSection = styled.div`
@@ -73,6 +82,12 @@ const LogoSection = styled.div`
   width: 30%;
   border: none;
   height: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+  }
 `
 
 const SiteMapSection = styled(LogoSection)`
@@ -80,6 +95,13 @@ const SiteMapSection = styled(LogoSection)`
   border-left-width: 0.1rem;
   border-left-style: solid;
   border-image: linear-gradient(to bottom, #ccc, rgba(0, 0, 0, 0)) 1 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    width: 100%;
+    border: none;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+  }
 `
 
 const InfoSection = styled(LogoSection)`
@@ -89,12 +111,23 @@ const InfoSection = styled(LogoSection)`
   border-left-width: 0.1rem;
   border-left-style: solid;
   border-image: linear-gradient(to bottom, #ccc, rgba(0, 0, 0, 0)) 1 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    width: 100%;
+    border: none;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+  }
 `
 
 const AddressSection = styled.div`
   width: 100%;
   padding: 0.2rem 1.5rem;
   margin: 0.5rem 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    padding: 0;
+  }
 `
 
 const ContactSection = styled(AddressSection)``
@@ -106,6 +139,11 @@ const Values = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 const Title = styled.h6`
