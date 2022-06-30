@@ -64,6 +64,7 @@ const ImgPreview = styled.div`
   display: none;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    display: block;
     padding: 0.5rem;
     margin: 0;
     width: 100%;

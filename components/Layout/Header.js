@@ -181,11 +181,14 @@ const NavLinkItem = styled.a`
 const ButtonContainer = styled(NavLinkContainer)`
   justify-content: flex-end;
   padding: 0;
-  width: max-content;
+  width: 30%;
   margin-right: 0.1rem;
-  width: max-content;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
+    width: 50%;
+  }
+
+  @media (max-width: 1400px) {
     display: none;
   }
 `

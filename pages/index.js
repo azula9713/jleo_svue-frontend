@@ -6,6 +6,7 @@ import GetStarted from '../components/Home/GetStarted'
 import HeroBanner from '../components/Home/HeroBanner'
 import OurStories from '../components/Home/OurStories'
 import OurWork from '../components/Home/OurWork'
+import OurWorkMobile from '../components/Home/OurWorkMobile'
 import WeDoSection from '../components/Home/WeDoSection'
 import Footer from '../components/Layout/Footer'
 import Header from '../components/Layout/Header'
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>J&apos;LEO SVUE</title>
       </Head>
       <Header />
@@ -24,8 +26,8 @@ export default function Home() {
         <HeroBanner />
         <WeDoSection />
         <OurWork />
+        <OurWorkMobile />
         <OurStories />
-        {/* Mobile our stories comes here */}
         <GetStarted />
       </MainSection>
       <Footer />

@@ -45,10 +45,6 @@ export default class MyDocument extends Document {
             name="description"
             content="We provide Planning Drawing and Submission, Interior & Architectural Design and Supply & Installation"
           />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
           <meta content="Interior Design Studio" property="og:title" />
           <meta
             property="og:image"

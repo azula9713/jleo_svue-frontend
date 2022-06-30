@@ -43,9 +43,14 @@ const HeroSection = styled.section`
 `
 
 const MobileHeroBg = styled.div`
-  position: relative;
-  width: 100%;
-  height: calc(100vh / 3);
+  display: none;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    position: relative;
+    width: 100%;
+    height: calc(100vh / 3);
+    display: block;
+  }
 `
 
 const HeroImage = styled(Image)`
