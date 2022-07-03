@@ -78,6 +78,7 @@ const Header = () => {
             btnText="I want an appointment"
             btnIcon="CalendarIcon"
             textColor={defaultTheme.textPrimary}
+            link="/create-appointment"
           />
           <HeaderButton
             btnColor={defaultTheme.primary}

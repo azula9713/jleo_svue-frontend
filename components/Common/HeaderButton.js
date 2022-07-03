@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 
 import CustomIcon from './CustomIcon'
 
@@ -9,13 +10,25 @@ const HeaderButton = ({
   textColor,
   customWidth,
   borderColor,
+  link,
 }) => {
+  const router = useRouter()
+
+  const handleRouting = () => {
+    router.push(link)
+  }
+
   return (
     <Container
       btnColor={btnColor}
       textClr={textColor}
       width={customWidth}
       borderColor={borderColor}
+      onClick={() => {
+        if (link) {
+          handleRouting()
+        }
+      }}
     >
       <ButtonLabel textClr={textColor}>{btnText}</ButtonLabel>
       <CustomIcon icon={btnIcon} isOutline color={textColor} />
