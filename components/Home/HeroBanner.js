@@ -77,7 +77,7 @@ const CtaContainer = styled.div`
 
 const SliderContainer = styled.div`
   width: 48%;
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 13rem);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     display: none;

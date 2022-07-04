@@ -16,7 +16,7 @@ const CTASection = () => {
           btnText="I want a quote"
           btnIcon="DocumentTextIcon"
           textColor={defaultTheme.white}
-          customWidth={'16rem'}
+          customWidth={'17.5rem'}
           borderColor={defaultTheme.primary}
         />
         <HeaderButton
@@ -24,7 +24,7 @@ const CTASection = () => {
           btnText="I want an appointment"
           btnIcon="CalendarIcon"
           textColor={defaultTheme.primary}
-          customWidth={'16rem'}
+          customWidth={'17.5rem'}
           borderColor={defaultTheme.primary}
         />
       </ActionContainer>
@@ -36,7 +36,7 @@ export default CTASection
 
 const CtaWrapper = styled.div`
   padding: 2rem;
-  max-width: 37rem;
+  max-width: 40rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     padding: 1 0.5rem;
