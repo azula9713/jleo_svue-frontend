@@ -1,0 +1,21 @@
+{
+  "title": {
+    "main": "Let's talk",
+    "subtitle": "This probably take around 5-10 minutes"
+  },
+  "info": {
+    "info1": "About how we work",
+    "info2": "Enter all the details to schedule a meeting with us",
+    "info3": "We will contact you with confirmation"
+  },
+  "form": {
+    "title": "My contact information",
+    "name": "Your name",
+    "email": "Email address",
+    "phone": "Phone number",
+    "date": "Date",
+    "desc": "Description",
+    "time": "Time slot",
+    "freeTalk": "I'm free to talk at"
+  }
+}

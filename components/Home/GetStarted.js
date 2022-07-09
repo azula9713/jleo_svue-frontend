@@ -20,7 +20,7 @@ const GetStarted = () => {
               btnText="I want a quote"
               btnIcon="DocumentTextIcon"
               textColor={defaultTheme.white}
-              customWidth={'16rem'}
+              customWidth={'17.5rem'}
               borderColor={defaultTheme.primary}
             />
           </CTABtn>
@@ -34,8 +34,9 @@ const GetStarted = () => {
               btnText="I want an appointment"
               btnIcon="CalendarIcon"
               textColor={defaultTheme.primary}
-              customWidth={'16rem'}
+              customWidth={'17.5rem'}
               borderColor={defaultTheme.primary}
+              link="/create-appointment"
             />
           </CTABtn>
         </Appointment>

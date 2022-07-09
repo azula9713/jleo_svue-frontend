@@ -26,6 +26,7 @@ const CTASection = () => {
           textColor={defaultTheme.primary}
           customWidth={'17.5rem'}
           borderColor={defaultTheme.primary}
+          link="/create-appointment"
         />
       </ActionContainer>
     </CtaWrapper>
