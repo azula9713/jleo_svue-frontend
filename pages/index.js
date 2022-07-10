@@ -42,6 +42,7 @@ const MainSection = styled.main`
   justify-content: center;
   margin: 2rem;
   margin-bottom: 0;
+  max-width: 2000px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     margin: 1rem;

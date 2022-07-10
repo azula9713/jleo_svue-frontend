@@ -14,6 +14,7 @@ import NavLinks from '../../data/constants/NavLinks'
 import { hoveredNavAtom } from '../../atoms/headerAtom'
 import defaultTheme from '../../styles/js/themeConfig'
 import { customStyles } from '../../styles/js/customStyles'
+import MobileNavLinks from './MobileNavLinks'
 
 const Header = () => {
   const router = useRouter()
@@ -70,6 +71,8 @@ const Header = () => {
                 <MdClose color="#000" />
               </CustomClose>
             </CloseWrapper>
+            <MobileNavLinks />
+            <div style={{ color: '#000' }}>Hello</div>
           </BurgerNav>
         </LinkContainer>
         <ButtonContainer>
@@ -102,6 +105,8 @@ const Headbar = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  width: 100%;
+  max-width: 2000px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     position: fixed;
@@ -112,7 +117,7 @@ const HeaderSection = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   height: 5rem;
   position: sticky;
   top: 0;
@@ -210,7 +215,7 @@ const BurgerNav = styled.div`
   right: 0;
   bottom: 0;
   background-color: ${({ theme }) => theme.white};
-  width: 20rem;
+  width: 40rem;
   z-index: 9999;
   list-style: none;
   padding: 1.4rem;
@@ -219,6 +224,14 @@ const BurgerNav = styled.div`
   text-align: start;
   transform: ${(props) => (props.show ? 'translateX(0)' : 'translateX(100%)')};
   transition: transform 0.2s;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 30rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    width: 20rem;
+  }
 
   li {
     padding: 1.5rem 0;

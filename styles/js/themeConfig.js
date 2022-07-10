@@ -17,6 +17,7 @@ const defaultTheme = {
   defaultFontFamily: 'Lato',
 
   breakpoints: {
+    xs: '500px',
     sm: '576px',
     md: '768px',
     lg: '992px',

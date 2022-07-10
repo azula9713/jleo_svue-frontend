@@ -33,6 +33,7 @@ const HeroSection = styled.section`
   background-color: ${(props) => props.theme.bgPrimary};
   padding: 0 2rem;
   margin-top: 2rem;
+  max-height: 1000px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     padding: 0 0.2rem;

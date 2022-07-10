@@ -37,6 +37,10 @@ const MegaMenuContainer = styled.div`
   top: 5rem;
   left: 0;
   z-index: 55;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: none;
+  }
 `
 
 const Wrapper = styled.div`

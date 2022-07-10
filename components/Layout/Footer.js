@@ -56,6 +56,7 @@ const FooterContainer = styled.footer`
   height: 25em;
   border-top: ${(props) => props.theme.borderPrimary};
   box-sizing: border-box;
+  max-width: 2000px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     height: max-content;
