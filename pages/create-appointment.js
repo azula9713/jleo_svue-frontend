@@ -42,6 +42,10 @@ export default CreateAppointment
 const AppointmentContainer = styled.div`
   height: 100%;
   background-color: ${(props) => props.theme.white};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    margin-top: 5rem;
+  }
 `
 
 const TitleWrapper = styled.div`
@@ -70,6 +74,12 @@ const FormContainer = styled.div`
   gap: 0;
   grid-template-columns: repeat(3, 1fr);
   margin: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
 `
 
 const InfoWrapper = styled.div`
@@ -78,12 +88,22 @@ const InfoWrapper = styled.div`
   height: 100%;
   grid-column-start: 1;
   grid-column-end: 2;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: none;
+  }
 `
 
 const FormWrapper = styled(InfoWrapper)`
   border-left: none;
   grid-column-start: 2;
   grid-column-end: 4;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: inline;
+    padding: 1rem 0.5rem;
+    border-left: ${(props) => props.theme.borderSecondary};
+  }
 `
 
 const InfoItem = styled.p`
@@ -94,6 +114,10 @@ const InfoItem = styled.p`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
     font-size: 0.9rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    margin: 1rem 0;
   }
 `
 

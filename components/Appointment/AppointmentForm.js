@@ -183,6 +183,10 @@ export default AppointmentForm
 const FormContainer = styled.form`
   margin-top: 2rem;
   width: 60%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 100%;
+  }
 `
 
 const TitleLabel = styled.label`
@@ -213,6 +217,10 @@ const DateDisplay = styled.div`
   justify-content: space-between;
   width: 50%;
   cursor: pointer;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 100%;
+  }
 `
 
 const DateSection = styled.div`
@@ -235,6 +243,8 @@ const TimeSlotWrapper = styled.div``
 
 const SlotsContainer = styled(DateDisplay)`
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 `
 
 const Slot = styled(DateSection)`
@@ -251,6 +261,10 @@ const SubmitButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    justify-content: center;
+  }
 `
 
 const SubmitButton = styled.button`
