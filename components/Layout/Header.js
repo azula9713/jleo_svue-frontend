@@ -9,12 +9,12 @@ import { MdClose } from 'react-icons/md'
 
 import HeaderButton from '../Common/HeaderButton'
 import MegaMenu from './MegaMenu'
+import MobileNavLinks from './MobileNavLinks'
 
 import NavLinks from '../../data/constants/NavLinks'
 import { hoveredNavAtom } from '../../atoms/headerAtom'
 import defaultTheme from '../../styles/js/themeConfig'
 import { customStyles } from '../../styles/js/customStyles'
-import MobileNavLinks from './MobileNavLinks'
 
 const Header = () => {
   const router = useRouter()
