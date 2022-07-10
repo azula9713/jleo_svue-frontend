@@ -72,7 +72,6 @@ const Header = () => {
               </CustomClose>
             </CloseWrapper>
             <MobileNavLinks />
-            <div style={{ color: '#000' }}>Hello</div>
           </BurgerNav>
         </LinkContainer>
         <ButtonContainer>

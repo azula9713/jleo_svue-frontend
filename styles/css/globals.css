@@ -13,6 +13,7 @@ body {
 * {
   box-sizing: border-box;
   overflow-x: hidden;
+  text-align: left;
 }
 
 .ri-social-icon {
