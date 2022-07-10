@@ -184,7 +184,11 @@ const FormContainer = styled.form`
   margin-top: 2rem;
   width: 60%;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
+    width: 80%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     width: 100%;
   }
 `
@@ -214,11 +218,11 @@ const DateWrapper = styled.div`
 const DateDisplay = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 50%;
   cursor: pointer;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     width: 100%;
   }
 `
@@ -227,6 +231,7 @@ const DateSection = styled.div`
   border: ${(props) => props.theme.borderPrimary};
   padding: 0.7rem 1rem;
   margin-top: 0.5rem;
+  margin-right: 1rem;
   font-size: 1rem;
   display: flex;
   align-items: center;
@@ -244,7 +249,7 @@ const TimeSlotWrapper = styled.div``
 const SlotsContainer = styled(DateDisplay)`
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 `
 
 const Slot = styled(DateSection)`
@@ -253,6 +258,7 @@ const Slot = styled(DateSection)`
     props.selectedSlot === props.faceValue && props.theme.white};
   background: ${(props) =>
     props.selectedSlot === props.faceValue && props.theme.primary};
+  margin-right: 1rem;
 `
 
 const SubmitButtonContainer = styled.div`
