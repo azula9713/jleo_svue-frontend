@@ -35,8 +35,8 @@ const MegaMenuContainer = styled.div`
   justify-content: center;
   position: absolute;
   top: 5rem;
-  left: 0;
   z-index: 55;
+  max-width: 2000px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     display: none;
