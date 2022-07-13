@@ -31,7 +31,7 @@ const MainSection = styled.main`
   margin: 2rem;
   margin-bottom: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     margin: 1rem;
   }
 `

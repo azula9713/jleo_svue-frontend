@@ -32,7 +32,7 @@ const MainSection = styled.section`
   height: 35rem;
   background-color: ${(props) => props.theme.bgPrimary};
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     flex-direction: column;
     height: max-content;
   }
@@ -48,7 +48,7 @@ const TextSection = styled.div`
   padding: 1rem 3rem;
   background-image: linear-gradient(to right, #9e9e9e, #312e2b);
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     width: 100%;
     padding: 1rem;
   }
@@ -59,7 +59,7 @@ const MainImageSection = styled.div`
   height: 100%;
   position: relative;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     width: 100%;
     height: 20rem;
   }
