@@ -29,6 +29,11 @@ const ItemContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
   padding: 2rem 2.5rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
 `
 const ItemTitle = styled.h4`
   margin: 0;

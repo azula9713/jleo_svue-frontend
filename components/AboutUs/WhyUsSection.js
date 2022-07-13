@@ -32,6 +32,10 @@ const Info = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding: 1rem 2rem;
+  }
 `
 
 const Desc = styled.p`
@@ -42,6 +46,11 @@ const Desc = styled.p`
   text-align: center;
   line-height: 2rem;
   color: ${(props) => props.theme.textPrimary};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
 `
 
 const ItemsWrapper = styled.div`
@@ -51,4 +60,9 @@ const ItemsWrapper = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 100%;
+    flex-direction: column;
+  }
 `
