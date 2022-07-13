@@ -1,18 +1,15 @@
-import Head from 'next/head'
+import styled from 'styled-components'
+
 import MainBanner from '../components/AboutUs/MainBanner'
 import Footer from '../components/Layout/Footer'
-import Header from '../components/Layout/Header'
 import WhyUsSection from '../components/AboutUs/WhyUsSection'
 import LetsTalk from '../components/Common/LetsTalk'
-import styled from 'styled-components'
+import HeadSection from '../components/Layout/HeadSection'
 
 export default function AboutUs() {
   return (
     <>
-      <Head>
-        <title>J&apos;LEO SVUE - About Us</title>
-      </Head>
-      <Header />
+      <HeadSection title="About Us" />
       <MainSection>
         <MainBanner />
         <WhyUsSection />

@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import ScrollToTop from 'react-scroll-to-top'
 import styled from 'styled-components'
 
@@ -9,18 +8,14 @@ import OurWork from '../components/Home/OurWork'
 import OurWorkMobile from '../components/Home/OurWorkMobile'
 import WeDoSection from '../components/Home/WeDoSection'
 import Footer from '../components/Layout/Footer'
-import Header from '../components/Layout/Header'
+import HeadSection from '../components/Layout/HeadSection'
 
 import defaultTheme from '../styles/js/themeConfig'
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>J&apos;LEO SVUE</title>
-      </Head>
-      <Header />
+      <HeadSection title="Home" />
       <MainSection>
         <ScrollToTop smooth color={defaultTheme.secondary} />
         <HeroBanner />

@@ -1,20 +1,15 @@
-import Head from 'next/head'
 import styled from 'styled-components'
-import GalleryItem from '../../components/Architecture/GalleryItem'
 
+import GalleryItem from '../../components/Architecture/GalleryItem'
 import Hero from '../../components/Case-study/Hero'
 import LetsTalk from '../../components/Common/LetsTalk'
 import Footer from '../../components/Layout/Footer'
-import Header from '../../components/Layout/Header'
+import HeadSection from '../../components/Layout/HeadSection'
 
 const Architecture = () => {
   return (
     <>
-      <Head>
-        <title>Case Study - Architecture</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
-      <Header />
+      <HeadSection title="Architecture" />
       <MainSection>
         <Hero
           title="SAVOY GRILL - GORDON RAMSAY"

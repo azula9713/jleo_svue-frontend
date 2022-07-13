@@ -1,8 +1,8 @@
-import Head from 'next/head'
 import styled from 'styled-components'
 import AppointmentForm from '../components/Appointment/AppointmentForm'
+import UserTitle from '../components/Common/UserTitle'
 
-import Header from '../components/Layout/Header'
+import HeadSection from '../components/Layout/HeadSection'
 
 import CreateAppointmentLocale from '../data/lang/CreateAppointment-en.json'
 
@@ -11,16 +11,9 @@ const CreateAppointment = () => {
 
   return (
     <div style={{ backgroundColor: '#fff' }}>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>J&apos;LEO SVUE - Create Appointment</title>
-      </Head>
-      <Header />
+      <HeadSection title="Create Appointment" />
       <AppointmentContainer>
-        <TitleWrapper>
-          <Title>{crl.title.main}</Title>
-          <SubTitle>{crl.title.subtitle}</SubTitle>
-        </TitleWrapper>
+        <UserTitle titleMain={crl.title.main} subtitle={crl.title.subtitle} />
         <FormContainer>
           <InfoWrapper>
             <InfoItem>{crl.info.info1}</InfoItem>
@@ -46,27 +39,6 @@ const AppointmentContainer = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     margin-top: 5rem;
   }
-`
-
-const TitleWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-`
-
-const Title = styled.h5`
-  color: ${(props) => props.theme.textPrimary};
-  margin: 0;
-  font-size: 2rem;
-`
-
-const SubTitle = styled.p`
-  margin: 0;
-  color: ${(props) => props.theme.textPrimary};
-  margin-top: 0.4rem;
 `
 
 const FormContainer = styled.div`
