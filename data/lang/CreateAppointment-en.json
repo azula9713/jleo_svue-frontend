@@ -16,6 +16,9 @@
     "date": "Date",
     "desc": "Description",
     "time": "Time slot",
-    "freeTalk": "I'm free to talk at"
+    "freeTalk": "I'm free to talk at",
+    "addressFirst": "Address 1st line",
+    "addressSecond": "Address 2nd line",
+    "postalCode": "Postal Code"
   }
 }

@@ -87,6 +87,7 @@ const Header = () => {
             btnText="I want a quote"
             btnIcon="DocumentTextIcon"
             textColor={defaultTheme.white}
+            link="/create-quote"
           />
         </ButtonContainer>
       </HeaderSection>

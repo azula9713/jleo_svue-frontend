@@ -67,8 +67,11 @@ const MobileNavLinks = () => {
             {hoveredTitle === navLink.name && (
               <ExpandedItems>
                 {firstLayerLinks?.links?.map((item) => (
-                  <label id={item.link}>{item.name}</label>
+                  <label key={item.link} id={item.link}>
+                    {item.name}
+                  </label>
                 ))}
+                z
               </ExpandedItems>
             )}
           </LinkItem>

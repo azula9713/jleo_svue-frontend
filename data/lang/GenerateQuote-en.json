@@ -1,0 +1,21 @@
+{
+  "title": {
+    "main": "Describe us",
+    "subtitle": "This probably take around 10-15 minutes"
+  },
+  "steps": {
+    "step1": "what we offer",
+    "step2": "your idea",
+    "step3": "your property"
+  },
+  "form": {
+    "title": "My contact information",
+    "name": "Your name",
+    "email": "Email address",
+    "phone": "Phone number",
+    "date": "Date",
+    "desc": "Description",
+    "time": "Time slot",
+    "freeTalk": "I'm free to talk at"
+  }
+}

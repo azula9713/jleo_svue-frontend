@@ -22,6 +22,7 @@ const GetStarted = () => {
               textColor={defaultTheme.white}
               customWidth={'17.5rem'}
               borderColor={defaultTheme.primary}
+              link="/create-quote"
             />
           </CTABtn>
         </Quote>
