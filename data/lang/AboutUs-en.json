@@ -7,5 +7,10 @@
   "whyUs": {
     "title": "Why Us?",
     "desc": "Our diverse design and build services are tailored to the needs of our clients. We deliver an unmatched level of quality on projects in every sector."
+  },
+  "team": {
+    "title": "Meet our team",
+    "desc": "The integration of architecture and the environment is at the heart of what we do here. We believe that every project requires a personalized approach, one where your needs are considered in order for you to enjoy living or working more comfortably day-in/day-out.",
+    "desc2": "In the design of their homes, our clients often find themselves at one point or another having to make tough decisions. The best part about designing for them? They get early glimpses into how those choices will affect everything from furniture layouts "
   }
 }

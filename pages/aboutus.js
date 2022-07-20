@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import MainBanner from '../components/AboutUs/MainBanner'
 import Footer from '../components/Layout/Footer'
 import WhyUsSection from '../components/AboutUs/WhyUsSection'
-import LetsTalk from '../components/Common/LetsTalk'
 import HeadSection from '../components/Layout/HeadSection'
+import OurTeam from '../components/AboutUs/OurTeam'
 
 export default function AboutUs() {
   return (
@@ -13,7 +13,7 @@ export default function AboutUs() {
       <MainSection>
         <MainBanner />
         <WhyUsSection />
-        <LetsTalk />
+        <OurTeam />
       </MainSection>
       <Footer />
     </>
