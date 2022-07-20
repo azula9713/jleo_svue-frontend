@@ -10,12 +10,12 @@
       {
         "name": "Case Study",
         "isExpandable": false,
-        "link": "/case-study/architecture"
+        "link": "/architecture/case-study"
       },
       {
         "name": "Pricing",
         "isExpandable": false,
-        "link": "/pricing/architecture"
+        "link": "/create-quote"
       }
     ]
   },
