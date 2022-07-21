@@ -1,0 +1,54 @@
+{
+  "categories": {
+    "all": [
+      {
+        "id": "wallpaper 1",
+        "src": "/img/wallpapers/1.jpg",
+        "user": {
+          "src": "/img/profile/1.jpg",
+          "name": "Teago General Store"
+        }
+      },
+      {
+        "id": "wallpaper 2",
+        "src": "/img/wallpapers/2.jpg",
+        "user": {
+          "src": "/img/profile/2.png",
+          "name": "Bio X Cell"
+        }
+      },
+      {
+        "id": "wallpaper 3",
+        "src": "/img/wallpapers/3.jpg",
+        "user": {
+          "src": "/img/profile/1.jpg",
+          "name": "Outer Limits Brewing"
+        }
+      },
+      {
+        "id": "wallpaper 4",
+        "src": "/img/wallpapers/4.jpg",
+        "user": {
+          "src": "/img/profile/4.jpg",
+          "name": "Geokon"
+        }
+      },
+      {
+        "id": "wallpaper 5",
+        "src": "/img/wallpapers/5.jpg",
+        "user": {
+          "src": "/img/profile/5.jpg",
+          "name": "Alliance for the Visual Arts (AVA)"
+        }
+      },
+      {
+        "id": "wallpaper 6",
+        "src": "/img/wallpapers/6.jpg",
+        "user": {
+          "src": "/img/profile/3.png",
+          "name": "Barre City Place"
+        }
+      }
+    ]
+  }
+}

@@ -8,7 +8,7 @@ const CaseStudyItem = ({ align }) => {
         <SideImage>
           <Image
             layout="fill"
-            src="/images/gr-savoy.jpeg"
+            src="/img/others/5.jpg"
             alt="Savoy Grill"
             objectFit="cover"
           />
@@ -26,7 +26,7 @@ const CaseStudyItem = ({ align }) => {
             <ImageSection align={align}>
               <Image
                 layout="fill"
-                src="/images/gr-savoy.jpeg"
+                src="/img/others/comm-cover.jpg"
                 alt="Savoy Grill"
                 objectFit="cover"
               />
