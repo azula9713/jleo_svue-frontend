@@ -107,6 +107,7 @@ const Headbar = styled.div`
   z-index: 9999;
   width: 100%;
   max-width: 2000px;
+  top: 0;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     position: fixed;

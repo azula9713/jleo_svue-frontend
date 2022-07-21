@@ -1,43 +1,31 @@
 import { useEffect } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
-import { useRecoilState, useSetRecoilState } from 'recoil'
+import { useRecoilState } from 'recoil'
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
 
-import {
-  firstLayerAtom,
-  hoveredNavAtom,
-  secondLayerAtom,
-  thirdLayerAtom,
-} from '../../atoms/headerAtom'
+import { firstLayerAtom, hoveredNavAtom } from '../../atoms/headerAtom'
 import NavLinks from '../../data/constants/NavLinks'
 import MegaMenuItems from '../../data/constants/json/MegaMenuItems.json'
 import SecondLayerItems from '../../data/constants/json/SecondLayerItems.json'
-import ThirdLayerItems from '../../data/constants/json/ThirdLayerItems.json'
 
 const MobileNavLinks = () => {
   const [hoveredTitle, setHoveredTitle] = useRecoilState(hoveredNavAtom)
   const [firstLayer, setFirstLayer] = useRecoilState(firstLayerAtom)
-  const [secondLayer, setSecondLayer] = useRecoilState(secondLayerAtom)
-  const setThirdLayer = useSetRecoilState(thirdLayerAtom)
 
   const firstLayerLinks = MegaMenuItems[hoveredTitle.toLowerCase()]
   const secondLayerLinks = SecondLayerItems[firstLayer]
-  const thirdLayerLinks = ThirdLayerItems[secondLayer]
 
   useEffect(() => {
     return () => {
-      setSecondLayer('')
       setFirstLayer('')
-      setThirdLayer('')
     }
   }, [])
 
   useEffect(() => {
     console.log('firstLayerLinks', firstLayerLinks)
     console.log('secondLayerLinks', secondLayerLinks)
-    console.log('thirdLayerLinks', thirdLayerLinks)
-  }, [firstLayerLinks, secondLayerLinks, thirdLayerLinks])
+  }, [firstLayerLinks, secondLayerLinks])
 
   return (
     <NavContainer>

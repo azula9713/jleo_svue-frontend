@@ -2,10 +2,10 @@ import Portfolio from '../../../components/Portfolio/Portfolio'
 
 import SampleImages from '../../../data/constants/json/Images.json'
 
-const Commercial = () => {
+const SingleStorey = () => {
   return (
     <Portfolio
-      title="Commercial"
+      title="Single Storey"
       images={SampleImages.categories.all}
       bgImage="/img/others/talk.jpg"
       coverImg="/img/others/comm-cover.jpg"
@@ -14,4 +14,4 @@ const Commercial = () => {
   )
 }
 
-export default Commercial
+export default SingleStorey

@@ -1,41 +1,41 @@
 {
-  "/architecture/services": {
-    "name": "Services",
+  "/architecture/residential": {
+    "name": "Residential",
     "links": [
       {
-        "name": "Residential",
-        "isExpandable": true,
-        "link": "/architecture/services/residential"
+        "name": "Single Storey",
+        "isExpandable": false,
+        "link": "/architecture/residential/single-storey"
       },
       {
-        "name": "Commercial",
+        "name": "Double Storey",
         "isExpandable": false,
-        "link": "/architecture/services/commercial"
+        "link": "/architecture/residential/double-storey"
       },
       {
-        "name": "Planning Applications",
+        "name": "Loft Conversion",
         "isExpandable": false,
-        "link": "/architecture/services/planning-applications"
+        "link": "/architecture/residential/loft-conversion"
       },
       {
-        "name": "Building Control DWG",
+        "name": "Wrap Around",
         "isExpandable": false,
-        "link": "/architecture/services/building-control-dwg"
+        "link": "/architecture/residential/wrap-around"
       },
       {
-        "name": "Change of Use",
+        "name": "Kitchen",
         "isExpandable": false,
-        "link": "/architecture/services/change-of-use"
+        "link": "/architecture/residential/kitchen"
       },
       {
-        "name": "New Build",
+        "name": "Basement Conversion",
         "isExpandable": false,
-        "link": "/architecture/services/new-build"
+        "link": "/architecture/residential/basement-conversion"
       },
       {
-        "name": "Structural Engineering",
+        "name": "Flat Conversion",
         "isExpandable": false,
-        "link": "/architecture/services/structural-engineering"
+        "link": "/architecture/residential/flat-conversion"
       }
     ]
   },

@@ -3,14 +3,39 @@
     "name": "Architecture",
     "links": [
       {
-        "name": "Services",
+        "name": "Residential",
         "isExpandable": true,
-        "link": "/architecture/services"
+        "link": "/architecture/residential"
       },
       {
-        "name": "Pricing",
+        "name": "Commercial",
         "isExpandable": false,
-        "link": "/create-quote"
+        "link": "/architecture/commercial"
+      },
+      {
+        "name": "Planning Applications",
+        "isExpandable": false,
+        "link": "/architecture/planning-applications"
+      },
+      {
+        "name": "Building Control DWG",
+        "isExpandable": false,
+        "link": "/architecture/building-control-dwg"
+      },
+      {
+        "name": "Change of Use",
+        "isExpandable": false,
+        "link": "/architecture/change-of-use"
+      },
+      {
+        "name": "New Build",
+        "isExpandable": false,
+        "link": "/architecture/new-build"
+      },
+      {
+        "name": "Structural Engineering",
+        "isExpandable": false,
+        "link": "/architecture/structural-engineering"
       }
     ]
   },

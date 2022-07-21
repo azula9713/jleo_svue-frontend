@@ -1,34 +1,24 @@
 import Image from 'next/image'
 import { useEffect } from 'react'
 import styled from 'styled-components'
-import { useRecoilState, useSetRecoilState } from 'recoil'
+import { useRecoilState } from 'recoil'
 
 import LayeredItems from './LayeredItems'
 
-import {
-  firstLayerAtom,
-  secondLayerAtom,
-  thirdLayerAtom,
-} from '../../atoms/headerAtom'
+import { firstLayerAtom } from '../../atoms/headerAtom'
 import { MenuLayerStructure } from '../../data/constants/LayerStructure'
 import MegaMenuItems from '../../data/constants/json/MegaMenuItems.json'
 import SecondLayerItems from '../../data/constants/json/SecondLayerItems.json'
-import ThirdLayerItems from '../../data/constants/json/ThirdLayerItems.json'
 
 const MenuItem = ({ navItem }) => {
   const [firstLayer, setFirstLayer] = useRecoilState(firstLayerAtom)
-  const [secondLayer, setSecondLayer] = useRecoilState(secondLayerAtom)
-  const setThirdLayer = useSetRecoilState(thirdLayerAtom)
 
   const firstLayerLinks = MegaMenuItems[navItem.toLowerCase()]
   const secondLayerLinks = SecondLayerItems[firstLayer]
-  const thirdLayerLinks = ThirdLayerItems[secondLayer]
 
   useEffect(() => {
     return () => {
-      setSecondLayer('')
       setFirstLayer('')
-      setThirdLayer('')
     }
   }, [])
 
@@ -44,10 +34,6 @@ const MenuItem = ({ navItem }) => {
           <LayeredItems
             layerPosition={MenuLayerStructure.secondLayer}
             menuLinks={secondLayerLinks}
-          />
-          <LayeredItems
-            layerPosition={MenuLayerStructure.thirdLayer}
-            menuLinks={thirdLayerLinks}
           />
         </MenuLinks>
       </DataSection>

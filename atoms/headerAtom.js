@@ -14,8 +14,3 @@ export const secondLayerAtom = atom({
   key: 'secondLayerAtom',
   default: '',
 })
-
-export const thirdLayerAtom = atom({
-  key: 'thirdLayerAtom',
-  default: '',
-})

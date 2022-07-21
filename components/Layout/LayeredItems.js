@@ -3,17 +3,12 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import { useRecoilState } from 'recoil'
 
-import {
-  firstLayerAtom,
-  secondLayerAtom,
-  thirdLayerAtom,
-} from '../../atoms/headerAtom'
+import { firstLayerAtom, secondLayerAtom } from '../../atoms/headerAtom'
 import { MenuLayerStructure } from '../../data/constants/LayerStructure'
 
 const LayeredItems = ({ menuLinks, layerPosition }) => {
   const [firstLayer, setFirstLayer] = useRecoilState(firstLayerAtom)
   const [secondLayer, setSecondLayer] = useRecoilState(secondLayerAtom)
-  const [thirdLayer, setThirdLayer] = useRecoilState(thirdLayerAtom)
 
   const [isLayerVisible, setIsLayerVisible] = useState(false)
 
@@ -22,10 +17,6 @@ const LayeredItems = ({ menuLinks, layerPosition }) => {
       setIsLayerVisible(true)
     } else if (layerPosition === MenuLayerStructure.secondLayer) {
       if (firstLayer !== '') {
-        setIsLayerVisible(true)
-      }
-    } else if (layerPosition === MenuLayerStructure.thirdLayer) {
-      if (firstLayer !== '' && secondLayer !== '') {
         setIsLayerVisible(true)
       }
     }
@@ -42,11 +33,6 @@ const LayeredItems = ({ menuLinks, layerPosition }) => {
       secondLayer === item.link
     ) {
       return true
-    } else if (
-      layerPosition === MenuLayerStructure.thirdLayer &&
-      thirdLayer === item.link
-    ) {
-      return true
     } else {
       return false
     }
@@ -59,10 +45,6 @@ const LayeredItems = ({ menuLinks, layerPosition }) => {
 
     if (layerPosition === MenuLayerStructure.secondLayer) {
       setSecondLayer('')
-    }
-
-    if (layerPosition === MenuLayerStructure.thirdLayer) {
-      setThirdLayer('')
     }
   }
 
@@ -89,9 +71,6 @@ const LayeredItems = ({ menuLinks, layerPosition }) => {
                 }
                 if (layerPosition === MenuLayerStructure.secondLayer) {
                   setSecondLayer(item.link)
-                }
-                if (layerPosition === MenuLayerStructure.thirdLayer) {
-                  setThirdLayer(item.link)
                 }
               }}
             >
@@ -127,21 +106,17 @@ const LayerItems = styled.div`
   width: ${({ layerPosition }) =>
     layerPosition === MenuLayerStructure.firstLayer ? '13rem' : '15rem'};
   padding: 1rem;
-  height: 100%;
-  border: ${({ theme }) => theme.borderSecondary};
-  border-top: none;
-  border-right: none;
+  height: max-content;
+  border-left: ${({ theme }) => theme.borderSecondary};
 `
 
 const LinkItem = styled.div`
   cursor: pointer;
   margin: 0.5rem 0;
   transition: all 0.2s ease-in-out;
-  height: ${({ layerPosition }) =>
-    layerPosition === MenuLayerStructure.firstLayer ? '2.7rem' : '1.95rem'};
+  height: 1.9rem;
   font-weight: 300;
-  font-size: ${({ layerPosition }) =>
-    layerPosition === MenuLayerStructure.firstLayer ? '1.1rem' : '0.9rem'};
+  font-size: 0.9rem;
 
   &:hover {
     font-weight: 600;
