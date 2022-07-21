@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-import GalleryItem from '../../components/Architecture/GalleryItem'
-import Hero from '../../components/Case-study/Hero'
-import LetsTalk from '../../components/Common/LetsTalk'
-import Footer from '../../components/Layout/Footer'
-import HeadSection from '../../components/Layout/HeadSection'
+import GalleryItem from '../../../components/Architecture/GalleryItem'
+import Hero from '../../../components/Case-study/Hero'
+import LetsTalk from '../../../components/Common/LetsTalk'
+import Footer from '../../../components/Layout/Footer'
+import HeadSection from '../../../components/Layout/HeadSection'
 
 const Architecture = () => {
   return (

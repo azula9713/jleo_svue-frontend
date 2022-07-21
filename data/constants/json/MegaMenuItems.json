@@ -8,11 +8,6 @@
         "link": "/architecture/services"
       },
       {
-        "name": "Case Study",
-        "isExpandable": false,
-        "link": "/architecture/case-study"
-      },
-      {
         "name": "Pricing",
         "isExpandable": false,
         "link": "/create-quote"

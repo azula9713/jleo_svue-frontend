@@ -26,7 +26,7 @@ const NavLinks = [
   {
     id: 5,
     name: 'Contact Us',
-    link: '/contact-us',
+    link: '/architecture/case-studies/savoy-grill',
     isMultiple: false,
   },
 ]
