@@ -1,26 +1,18 @@
 import styled from 'styled-components'
 
-import CaseStudyItem from '../../../components/Architecture/CaseStudyItem'
-import LetsTalk from '../../../components/Common/LetsTalk'
-import Footer from '../../../components/Layout/Footer'
-import HeadSection from '../../../components/Layout/HeadSection'
-import MasonryLayout from '../../../components/MasonryLayout/MasonryLayout'
+import Portfolio from '../../../components/Portfolio/Portfolio'
 
 import SampleImages from '../../../data/constants/json/Images.json'
 
 const Commercial = () => {
   return (
-    <>
-      <HeadSection title="Commercial" />
-      <MainSection>
-        <GalleryContainer>
-          <CaseStudyItem align="right" />
-          <MasonryLayout images={SampleImages.categories.all} />
-        </GalleryContainer>
-        <LetsTalk bgImage="/img/others/talk.jpg" />
-      </MainSection>
-      <Footer />
-    </>
+    <Portfolio
+      title="Commercial"
+      images={SampleImages.categories.all}
+      bgImage="/img/others/talk.jpg"
+      coverImg="/img/others/comm-cover.jpg"
+      leftImg="/img/others/5.jpg"
+    />
   )
 }
 
