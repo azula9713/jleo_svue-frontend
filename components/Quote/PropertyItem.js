@@ -22,7 +22,6 @@ const ItemContainer = styled.div`
   justify-content: space-between;
   border: ${(props) => props.theme.borderPrimary};
 
-  //remove margin-right from the last item
   &:last-child {
     margin-right: 0;
   }
@@ -30,10 +29,19 @@ const ItemContainer = styled.div`
   &:hover {
     border: ${(props) => props.theme.borderTertiary};
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
 `
 const ItemImage = styled.img`
   width: 11rem;
   object-fit: cover;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 6rem;
+  }
 `
 
 const ItemName = styled.div`

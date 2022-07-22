@@ -4,13 +4,15 @@ import { DayPicker } from 'react-day-picker'
 import Modal from 'react-modal'
 
 import PickerTitle from './PickerTitle'
+
+import MonthConverter from '../../utils/MonthConverter'
 import {
   dayPickerCustomStyles,
   ItemsContainer,
   modalBasicStyles,
   SectionContainer,
 } from '../../styles/js/customStyles'
-import MonthConverter from '../../utils/MonthConverter'
+import 'react-day-picker/dist/style.css'
 
 const WorkStart = () => {
   const [pickerVisible, setPickerVisible] = useState(false)

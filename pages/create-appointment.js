@@ -3,6 +3,7 @@ import AppointmentForm from '../components/Appointment/AppointmentForm'
 import UserTitle from '../components/Common/UserTitle'
 
 import HeadSection from '../components/Layout/HeadSection'
+import Footer from '../components/Layout/Footer'
 
 import CreateAppointmentLocale from '../data/lang/CreateAppointment-en.json'
 
@@ -26,6 +27,7 @@ const CreateAppointment = () => {
           </FormWrapper>
         </FormContainer>
       </AppointmentContainer>
+      <Footer />
     </div>
   )
 }

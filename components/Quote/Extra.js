@@ -17,7 +17,7 @@ const Extra = () => {
         fieldName="desc"
         inputType="text"
         fieldType="textarea"
-        textBoxRows={10}
+        textBoxRows={7}
       />
       <BottomBorder />
     </SectionContainer>

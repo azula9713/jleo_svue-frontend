@@ -18,6 +18,9 @@ const TitleWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  }
 `
 
 const Title = styled.h5`

@@ -26,4 +26,12 @@ const PropertyContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    overflow-x: hidden;
+    /* flex-direction: column; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
 `

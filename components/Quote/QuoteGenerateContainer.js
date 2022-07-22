@@ -51,6 +51,7 @@ const MainContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     margin-top: 5rem;
+    width: 100%;
   }
 `
 
@@ -60,10 +61,11 @@ const FormContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   margin: 2rem;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    margin: 2rem 0.5rem;
   }
 `
 

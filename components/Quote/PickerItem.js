@@ -29,9 +29,12 @@ const ItemContainer = styled.div`
       ? props.theme.white
       : props.theme.textPrimary};
   cursor: pointer;
-
-  &:hover {
+  v &:hover {
     border: ${(props) =>
       props.selected === props.value ? 'none' : props.theme.borderTertiary};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 100%;
   }
 `

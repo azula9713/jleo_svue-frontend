@@ -53,20 +53,18 @@ const ConstructionBudget = () => {
   return (
     <SectionContainer>
       <PickerTitle title="What is your estimated construction budget?" />
-      <ItemsContainer>
-        {
-          <BudgetPicker
-            value={selectedBudget}
-            onChange={(e) => setSelectedBudget(e.target.value)}
-          >
-            {Budgets.map((budget, index) => (
-              <option key={index} value={budget.value}>
-                {budget.label}
-              </option>
-            ))}
-          </BudgetPicker>
-        }
-      </ItemsContainer>
+      <PickerContainer>
+        <BudgetPicker
+          value={selectedBudget}
+          onChange={(e) => setSelectedBudget(e.target.value)}
+        >
+          {Budgets.map((budget, index) => (
+            <option key={index} value={budget.value}>
+              {budget.label}
+            </option>
+          ))}
+        </BudgetPicker>
+      </PickerContainer>
     </SectionContainer>
   )
 }
@@ -81,5 +79,18 @@ const BudgetPicker = styled.select`
 
   &:focus {
     outline: none;
+  }
+`
+
+const PickerContainer = styled.div`
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    justify-content: center;
   }
 `

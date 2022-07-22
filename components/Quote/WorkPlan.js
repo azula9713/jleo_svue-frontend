@@ -44,4 +44,8 @@ const WorkPlanItem = styled.div`
   &:hover {
     border: ${(props) => props.theme.borderTertiary};
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 100%;
+  }
 `

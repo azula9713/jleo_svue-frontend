@@ -80,9 +80,17 @@ const UserDataContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    flex-direction: column;
+  }
 `
 
 const LeftSection = styled.div`
   width: 47%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 100%;
+  }
 `
 const RightSection = styled(LeftSection)``

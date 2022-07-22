@@ -25,6 +25,10 @@ export const SectionContainer = styled.div`
   &:last-child {
     margin-bottom: 2rem;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 100%;
+  }
 `
 
 export const ItemsContainer = styled.div`

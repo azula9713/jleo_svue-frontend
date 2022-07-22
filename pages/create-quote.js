@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { quoteCategoryState, quoteMethodState } from '../atoms/quoteAtom'
 
 import HeadSection from '../components/Layout/HeadSection'
+import Footer from '../components/Layout/Footer'
 import QuoteGenerateContainer from '../components/Quote/QuoteGenerateContainer'
 
 const CreateQuote = () => {
@@ -16,6 +17,7 @@ const CreateQuote = () => {
       <MainSection>
         <QuoteGenerateContainer method={quoteMethod} category={category} />
       </MainSection>
+      <Footer />
     </div>
   )
 }
