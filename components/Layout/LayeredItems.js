@@ -65,7 +65,7 @@ const LayeredItems = ({ menuLinks, layerPosition }) => {
               layerPosition={layerPosition}
               isSelected={checkLayerSelected(item)}
               key={index}
-              onClick={() => {
+              onMouseEnter={() => {
                 if (layerPosition === MenuLayerStructure.firstLayer) {
                   setFirstLayer(item.link)
                 }

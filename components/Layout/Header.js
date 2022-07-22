@@ -215,7 +215,7 @@ const BurgerNav = styled.div`
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: ${({ theme }) => theme.white};
+  background-color: ${({ theme }) => theme.textPrimary};
   width: 40rem;
   z-index: 9999;
   list-style: none;
