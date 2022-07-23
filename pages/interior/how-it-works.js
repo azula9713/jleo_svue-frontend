@@ -1,6 +1,7 @@
 import styled from 'styled-components'
-import Step from '../../components/HowItWorks/Step'
+import Fade from 'react-reveal/Fade'
 
+import Step from '../../components/HowItWorks/Step'
 import Footer from '../../components/Layout/Footer'
 import HeadSection from '../../components/Layout/HeadSection'
 
@@ -45,7 +46,9 @@ const HowItWorks = () => {
           </TextField>
           <Steps>
             {workSteps.map((step) => (
-              <Step key={step.id} step={step} />
+              <Fade right key={step.id} ssrFadeout duration={500 * step.id}>
+                <Step step={step} />
+              </Fade>
             ))}
           </Steps>
         </Background>
