@@ -39,38 +39,38 @@
       }
     ]
   },
-  "/interiors/residential": {
+  "/interior/residential": {
     "name": "Residential",
     "links": [
       {
         "name": "Home Office",
         "isExpandable": false,
-        "link": "/interiors/residential/home-office"
+        "link": "/interior/residential/home-office"
       },
       {
         "name": "Bedroom",
         "isExpandable": false,
-        "link": "/interiors/residential/bedroom"
+        "link": "/interior/residential/bedroom"
       },
       {
         "name": "Living Area",
         "isExpandable": false,
-        "link": "/interiors/residential/living-area"
+        "link": "/interior/residential/living-area"
       },
       {
         "name": "Kitchen",
         "isExpandable": false,
-        "link": "/interiors/residential/kitchen"
+        "link": "/interior/residential/kitchen"
       },
       {
         "name": "Games Room",
         "isExpandable": false,
-        "link": "/interiors/residential/games-room"
+        "link": "/interior/residential/games-room"
       },
       {
         "name": "Pantry/Storage",
         "isExpandable": false,
-        "link": "/interiors/residential/pantry-storage"
+        "link": "/interior/residential/pantry-storage"
       }
     ]
   }

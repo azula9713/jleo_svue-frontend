@@ -7,7 +7,7 @@ const NavLinks = [
   },
   {
     id: 2,
-    name: 'Interiors',
+    name: 'Interior',
     link: '#',
     isMultiple: true,
   },

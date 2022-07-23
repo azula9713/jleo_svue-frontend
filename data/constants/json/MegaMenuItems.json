@@ -39,23 +39,23 @@
       }
     ]
   },
-  "interiors": {
-    "name": "Interiors",
+  "interior": {
+    "name": "Interior",
     "links": [
       {
         "name": "How It Works",
         "isExpandable": false,
-        "link": "/interiors/how-it-works"
+        "link": "/interior/how-it-works"
       },
       {
         "name": "Residential",
         "isExpandable": true,
-        "link": "/interiors/residential"
+        "link": "/interior/residential"
       },
       {
         "name": "Commercial",
         "isExpandable": false,
-        "link": "/interiors/commercial"
+        "link": "/interior/commercial"
       }
     ]
   },

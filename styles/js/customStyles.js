@@ -15,6 +15,20 @@ export const modalBasicStyles = {
   },
 }
 
+export const MainSection = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  margin-bottom: 0;
+  max-width: 2000px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+    margin: 1rem;
+  }
+`
+
 export const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;

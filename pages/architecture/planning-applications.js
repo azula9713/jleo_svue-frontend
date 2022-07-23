@@ -1,6 +1,6 @@
-import Portfolio from '../../../components/Portfolio/Portfolio'
+import Portfolio from '../../components/Portfolio/Portfolio'
 
-import SampleImages from '../../../data/constants/json/Images.json'
+import SampleImages from '../../data/constants/json/Images.json'
 
 const PlanningApplications = () => {
   return (

@@ -1,5 +1,4 @@
 import ScrollToTop from 'react-scroll-to-top'
-import styled from 'styled-components'
 
 import GetStarted from '../components/Home/GetStarted'
 import HeroBanner from '../components/Home/HeroBanner'
@@ -10,6 +9,7 @@ import WeDoSection from '../components/Home/WeDoSection'
 import Footer from '../components/Layout/Footer'
 import HeadSection from '../components/Layout/HeadSection'
 
+import { MainSection } from '../styles/js/customStyles'
 import defaultTheme from '../styles/js/themeConfig'
 
 export default function Home() {
@@ -29,17 +29,3 @@ export default function Home() {
     </>
   )
 }
-
-const MainSection = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 2rem;
-  margin-bottom: 0;
-  max-width: 2000px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    margin: 1rem;
-  }
-`

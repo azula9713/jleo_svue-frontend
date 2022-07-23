@@ -5,6 +5,7 @@ import LetsTalk from '../Common/LetsTalk'
 import HeadSection from '../Layout/HeadSection'
 import Footer from '../Layout/Footer'
 import MasonryLayout from '../MasonryLayout/MasonryLayout'
+import { MainSection } from '../../styles/js/customStyles'
 
 const Portfolio = ({ title, images, bgImage, coverImg, leftImg }) => {
   return (
@@ -29,18 +30,6 @@ const Portfolio = ({ title, images, bgImage, coverImg, leftImg }) => {
 
 export default Portfolio
 
-const MainSection = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 2rem;
-  margin-bottom: 0;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    margin: 1rem;
-  }
-`
 const GalleryContainer = styled.div`
   width: 100%;
   height: 100%;
