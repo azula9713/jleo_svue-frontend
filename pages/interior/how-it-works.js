@@ -91,11 +91,26 @@ const Background = styled.div`
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    flex-direction: column;
+    padding: 3rem 0;
+    margin-top: 5rem;
+    height: auto;
+  }
 `
 
 const TextField = styled.div`
   width: 35%;
   z-index: 1;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `
 
 const TextFieldLabel = styled.label`
@@ -105,9 +120,24 @@ const TextFieldLabel = styled.label`
   font-size: 4rem;
   font-weight: 700;
   line-height: 6.2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+  }
 `
 
 const Steps = styled.div`
   width: 65%;
   z-index: 1;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `
