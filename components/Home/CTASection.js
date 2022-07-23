@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Fade } from 'react-reveal'
 
 import HeaderButton from '../Common/HeaderButton'
 
@@ -8,28 +9,32 @@ import defaultTheme from '../../styles/js/themeConfig'
 const CTASection = () => {
   return (
     <CtaWrapper>
-      <Title>{HomeLocale.heroBanner.title}</Title>
-      <Desc>{HomeLocale.heroBanner.desc}</Desc>
-      <ActionContainer>
-        <HeaderButton
-          btnColor={defaultTheme.primary}
-          btnText="I want a quote"
-          btnIcon="DocumentTextIcon"
-          textColor={defaultTheme.white}
-          customWidth={'17.5rem'}
-          borderColor={defaultTheme.primary}
-          link="/create-quote"
-        />
-        <HeaderButton
-          btnColor="transparent"
-          btnText="I want an appointment"
-          btnIcon="CalendarIcon"
-          textColor={defaultTheme.primary}
-          customWidth={'17.5rem'}
-          borderColor={defaultTheme.primary}
-          link="/create-appointment"
-        />
-      </ActionContainer>
+      <Fade left ssrFadeout duration={500}>
+        <Title>{HomeLocale.heroBanner.title}</Title>
+        <Desc>{HomeLocale.heroBanner.desc}</Desc>
+      </Fade>
+      <Fade left ssrFadeout duration={1000}>
+        <ActionContainer>
+          <HeaderButton
+            btnColor={defaultTheme.primary}
+            btnText="I want a quote"
+            btnIcon="DocumentTextIcon"
+            textColor={defaultTheme.white}
+            customWidth={'17.5rem'}
+            borderColor={defaultTheme.primary}
+            link="/create-quote"
+          />
+          <HeaderButton
+            btnColor="transparent"
+            btnText="I want an appointment"
+            btnIcon="CalendarIcon"
+            textColor={defaultTheme.primary}
+            customWidth={'17.5rem'}
+            borderColor={defaultTheme.primary}
+            link="/create-appointment"
+          />
+        </ActionContainer>
+      </Fade>
     </CtaWrapper>
   )
 }

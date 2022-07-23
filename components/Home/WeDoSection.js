@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Fade } from 'react-reveal'
 
 import WeDoItem from './WeDoItem'
 import SectionTitle from '../Common/SectionTitle'
@@ -11,11 +12,15 @@ const WeDoSection = () => {
     <>
       <Info>
         <SectionTitle title={HomeLocale.weDo.title} />
-        <Desc>{HomeLocale.weDo.desc}</Desc>
+        <Fade left ssrFadeout duration={750}>
+          <Desc>{HomeLocale.weDo.desc}</Desc>
+        </Fade>
       </Info>
       <ItemsWrapper>
         {WeDoData.map((item) => (
-          <WeDoItem key={item.id} item={item} />
+          <Fade up ssrFadeout duration={500 * item.id} key={item.id}>
+            <WeDoItem item={item} />
+          </Fade>
         ))}
       </ItemsWrapper>
     </>

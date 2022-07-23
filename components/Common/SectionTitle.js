@@ -1,7 +1,12 @@
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade'
 
 const SectionTitle = ({ title }) => {
-  return <Title>{title}</Title>
+  return (
+    <Fade left ssrFadeout duration={1000}>
+      <Title>{title}</Title>
+    </Fade>
+  )
 }
 
 export default SectionTitle
