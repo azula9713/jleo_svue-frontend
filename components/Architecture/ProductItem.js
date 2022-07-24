@@ -10,6 +10,7 @@ const ProductItem = ({ product }) => {
           <ViewButton>
             View Our Work
             {/* add long arrow  */}
+            <Arrow>&#10230;</Arrow>
           </ViewButton>
         </DataWrapper>
         <SideImageContainer>
@@ -119,6 +120,7 @@ const ViewButton = styled.button`
   text-transform: uppercase;
   margin-top: 3rem;
   padding: 0.5rem 1rem;
+  padding-top: 0;
   width: 30%;
   color: ${({ theme }) => theme.primary};
   border: none;
@@ -141,4 +143,10 @@ const ViewButton = styled.button`
     margin-top: 1rem;
     text-align: center;
   }
+`
+
+const Arrow = styled.span`
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 0.5rem;
 `

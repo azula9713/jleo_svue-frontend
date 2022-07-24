@@ -113,7 +113,7 @@ const Title = styled.label`
   font-size: 4rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 `
 
