@@ -2,7 +2,7 @@ const NavLinks = [
   {
     id: 1,
     name: 'Architecture',
-    link: '#',
+    link: '/architecture',
     isMultiple: true,
   },
   {

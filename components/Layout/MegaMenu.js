@@ -1,28 +1,13 @@
-import { useEffect } from 'react'
 import styled from 'styled-components'
-import { useRouter } from 'next/router'
 import { Fade } from 'react-reveal'
-import { useRecoilState } from 'recoil'
+import { useSetRecoilState } from 'recoil'
 
 import MenuItem from './MenuItem'
 
 import { hoveredNavAtom } from '../../atoms/headerAtom'
 
 const MegaMenu = ({ menuTitle }) => {
-  const router = useRouter()
-
-  const path = router.pathname
-
-  const [hoveredTitle, setHoveredTitle] = useRecoilState(hoveredNavAtom)
-
-  useEffect(() => {
-    //check if path contains the hoverd title
-    if (path.includes(hoveredTitle.toLowerCase()) && path !== '/') {
-      setHoveredTitle('')
-    }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  const setHoveredTitle = useSetRecoilState(hoveredNavAtom)
 
   return (
     <MegaMenuContainer>

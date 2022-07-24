@@ -1,7 +1,13 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 
-const CaseStudyItem = ({ align, title, leftImg, coverImg }) => {
+const CaseStudyItem = ({
+  align,
+  title,
+  leftImg,
+  coverImg,
+  subtitleVisible = true,
+}) => {
   return (
     <Container>
       {align === 'right' && (
@@ -15,7 +21,7 @@ const CaseStudyItem = ({ align, title, leftImg, coverImg }) => {
             <DetailSection>
               <CardTitle>
                 <Title>{title}</Title>
-                <SubTitle>Case Studies</SubTitle>
+                {subtitleVisible && <SubTitle>Case Studies</SubTitle>}
               </CardTitle>
             </DetailSection>
             <ImageSection align={align}>

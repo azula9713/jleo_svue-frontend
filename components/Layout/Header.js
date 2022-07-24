@@ -43,7 +43,7 @@ const Header = () => {
               <Link key={navLink.id} href={navLink.link}>
                 <NavLinkItem
                   onMouseEnter={() => {
-                    if (navLink.link === '#') {
+                    if (navLink.isMultiple) {
                       setHoveredTitle(navLink.name)
                     }
                   }}

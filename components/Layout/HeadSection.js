@@ -1,7 +1,19 @@
 import Head from 'next/head'
+import { useEffect } from 'react'
+import { useSetRecoilState } from 'recoil'
+
+import { hoveredNavAtom } from '../../atoms/headerAtom'
+
 import Header from './Header'
 
 const HeadSection = ({ title }) => {
+  const setHoveredTitle = useSetRecoilState(hoveredNavAtom)
+
+  useEffect(() => {
+    setHoveredTitle('')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <>
       <Head>
