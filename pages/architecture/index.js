@@ -1,3 +1,4 @@
+import styled from 'styled-components'
 import CaseStudyItem from '../../components/Architecture/CaseStudyItem'
 import ProductItem from '../../components/Architecture/ProductItem'
 import LetsTalk from '../../components/Common/LetsTalk'
@@ -47,16 +48,19 @@ const Architecture = () => {
     <>
       <HeadSection title="Architecture" />
       <MainSection>
-        <CaseStudyItem
-          align="right"
-          title="Architecture"
-          coverImg="/img/others/talk.jpg"
-          leftImg="/img/others/comm-cover.jpg"
-          subtitleVisible={false}
-        />
-        {architectProds.map((prod) => (
-          <ProductItem key={prod.id} product={prod} />
-        ))}
+        <GalleryContainer>
+          <CaseStudyItem
+            align="right"
+            title="Architecture"
+            coverImg="/img/others/talk.jpg"
+            leftImg="/img/others/comm-cover.jpg"
+            subtitleVisible={false}
+          />
+          {architectProds.map((prod) => (
+            <ProductItem key={prod.id} product={prod} />
+          ))}
+        </GalleryContainer>
+
         <LetsTalk bgImage="/img/others/talk.jpg" />
       </MainSection>
       <Footer />
@@ -65,3 +69,12 @@ const Architecture = () => {
 }
 
 export default Architecture
+
+const GalleryContainer = styled.div`
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    margin-top: 5rem;
+  }
+`

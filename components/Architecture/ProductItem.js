@@ -39,16 +39,30 @@ const DetailSection = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
 `
 
 const DataWrapper = styled.div`
   width: 60%;
   padding: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 100%;
+    padding: 1rem;
+  }
 `
 
 const SideImageContainer = styled.div`
   width: 40%;
   height: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 100%;
+  }
 `
 
 const SideImage = styled.img`
@@ -70,6 +84,10 @@ const Banner = styled.div`
   &:last-child {
     margin-bottom: 3rem;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: none;
+  }
 `
 
 const Title = styled.h3`
@@ -77,6 +95,11 @@ const Title = styled.h3`
   margin-bottom: 2rem;
   color: ${({ theme }) => theme.textPrimary};
   font-size: 2rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
 `
 
 const Desc = styled.p`
@@ -85,6 +108,11 @@ const Desc = styled.p`
   font-size: 0.85rem;
   text-align: justify;
   color: ${({ theme }) => theme.textTertiary};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: 100%;
+    text-align: left;
+  }
 `
 
 const ViewButton = styled.button`
@@ -106,5 +134,11 @@ const ViewButton = styled.button`
     background: ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.white};
     border: ${({ theme }) => theme.borderTertiary};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
   }
 `
