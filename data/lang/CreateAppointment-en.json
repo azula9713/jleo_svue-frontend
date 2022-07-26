@@ -1,7 +1,8 @@
 {
   "title": {
     "main": "Let's talk",
-    "subtitle": "This probably take around 5-10 minutes"
+    "subtitle": "This probably take around 5-10 minutes",
+    "tabHeader": "Create Appointment"
   },
   "info": {
     "info1": "About how we work",

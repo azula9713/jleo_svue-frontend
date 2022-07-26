@@ -5,6 +5,8 @@ import { quoteCategoryState, quoteMethodState } from '../atoms/quoteAtom'
 import HeadSection from '../components/Layout/HeadSection'
 import Footer from '../components/Layout/Footer'
 import QuoteGenerateContainer from '../components/Quote/QuoteGenerateContainer'
+
+import QuoteLocale from '../data/lang/GenerateQuote-en.json'
 import { MainSection } from '../styles/js/customStyles'
 
 const CreateQuote = () => {
@@ -13,7 +15,7 @@ const CreateQuote = () => {
 
   return (
     <div style={{ backgroundColor: '#fff' }}>
-      <HeadSection title="Generate Free Quote" />
+      <HeadSection title={QuoteLocale.title.tabHeader} />
       <MainSection>
         <QuoteGenerateContainer method={quoteMethod} category={category} />
       </MainSection>

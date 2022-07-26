@@ -4,6 +4,7 @@ import { Fade } from 'react-reveal'
 import HeaderButton from '../Common/HeaderButton'
 
 import HomeLocale from '../../data/lang/Home-en.json'
+import CommonLocale from '../../data/lang/Common-en.json'
 import defaultTheme from '../../styles/js/themeConfig'
 
 const CTASection = () => {
@@ -17,7 +18,7 @@ const CTASection = () => {
         <ActionContainer>
           <HeaderButton
             btnColor={defaultTheme.primary}
-            btnText="I want a quote"
+            btnText={CommonLocale.quote}
             btnIcon="DocumentTextIcon"
             textColor={defaultTheme.white}
             customWidth={'17.5rem'}
@@ -26,7 +27,7 @@ const CTASection = () => {
           />
           <HeaderButton
             btnColor="transparent"
-            btnText="I want an appointment"
+            btnText={CommonLocale.appointment}
             btnIcon="CalendarIcon"
             textColor={defaultTheme.primary}
             customWidth={'17.5rem'}

@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
+import CommonLocale from '../../data/lang/Common-en.json'
+
 const LetsTalk = ({ bgImage }) => {
   return (
     <LetsTalkContainer bg={bgImage}>
-      <Title>Lets Talk</Title>
-      <CTA>I want a quote</CTA>
+      <Title>{CommonLocale.talk}</Title>
+      <CTA>{CommonLocale.quote}</CTA>
     </LetsTalkContainer>
   )
 }

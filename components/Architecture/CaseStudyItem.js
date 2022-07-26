@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 
+import CommonLocale from '../../data/lang/Common-en.json'
+
 const CaseStudyItem = ({
   align,
   title,
@@ -39,8 +41,8 @@ const CaseStudyItem = ({
               />
             </ImageSection>
             <CTASection>
-              <Title>Lets Talk</Title>
-              <CTA>I want a quote</CTA>
+              <Title>{CommonLocale.talk}</Title>
+              <CTA>{CommonLocale.quote}</CTA>
             </CTASection>
           </>
         )}

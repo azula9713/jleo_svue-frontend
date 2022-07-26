@@ -1,7 +1,8 @@
 {
   "title": {
     "main": "Describe us",
-    "subtitle": "This probably take around 10-15 minutes"
+    "subtitle": "This probably take around 10-15 minutes",
+    "tabHeader": "Generate Free Quote"
   },
   "steps": {
     "step1": "what we offer",

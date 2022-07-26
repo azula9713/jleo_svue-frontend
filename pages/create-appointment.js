@@ -1,7 +1,7 @@
 import styled from 'styled-components'
+
 import AppointmentForm from '../components/Appointment/AppointmentForm'
 import UserTitle from '../components/Common/UserTitle'
-
 import HeadSection from '../components/Layout/HeadSection'
 import Footer from '../components/Layout/Footer'
 
@@ -12,7 +12,7 @@ const CreateAppointment = () => {
 
   return (
     <div style={{ backgroundColor: '#fff' }}>
-      <HeadSection title="Create Appointment" />
+      <HeadSection title={crl.title.tabHeader} />
       <AppointmentContainer>
         <UserTitle titleMain={crl.title.main} subtitle={crl.title.subtitle} />
         <FormContainer>

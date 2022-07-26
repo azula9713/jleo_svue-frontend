@@ -13,6 +13,7 @@ import MobileNavLinks from './MobileNavLinks'
 
 import NavLinks from '../../data/constants/NavLinks'
 import { hoveredNavAtom } from '../../atoms/headerAtom'
+import CommonLocale from '../../data/lang/Common-en.json'
 import defaultTheme from '../../styles/js/themeConfig'
 import { customStyles } from '../../styles/js/customStyles'
 
@@ -31,12 +32,13 @@ const Header = () => {
               router.push('/')
             }}
           >
-            <Image
+            <img src="/logojleo.svg" alt="J'LEO SVUE" />
+            {/* <Image
               src="/logojleo.svg"
               alt="J'LEO SVUE"
               height={72}
               width={180}
-            />
+            /> */}
           </ImageContainer>
           <NavLinkContainer>
             {NavLinks.map((navLink) => (
@@ -77,14 +79,14 @@ const Header = () => {
         <ButtonContainer>
           <HeaderButton
             btnColor="transparent"
-            btnText="I want an appointment"
+            btnText={CommonLocale.appointment}
             btnIcon="CalendarIcon"
             textColor={defaultTheme.textPrimary}
             link="/create-appointment"
           />
           <HeaderButton
             btnColor={defaultTheme.primary}
-            btnText="I want a quote"
+            btnText={CommonLocale.quote}
             btnIcon="DocumentTextIcon"
             textColor={defaultTheme.white}
             link="/create-quote"
@@ -135,7 +137,7 @@ const LinkContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     justify-content: space-between;
     width: 100%;
   }
@@ -144,16 +146,12 @@ const LinkContainer = styled.div`
 const ImageContainer = styled.div`
   max-height: 5rem;
   padding: 0 1.7rem;
-  width: 30%;
+  width: max-content;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   position: relative;
   cursor: pointer;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    width: 100%;
-  }
 `
 
 const NavLinkContainer = styled.nav`
@@ -191,11 +189,7 @@ const ButtonContainer = styled(NavLinkContainer)`
   width: 30%;
   margin-right: 0.1rem;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.xxl}) {
-    width: 50%;
-  }
-
-  @media (max-width: 1400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     display: none;
   }
 `
