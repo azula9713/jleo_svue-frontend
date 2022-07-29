@@ -9,6 +9,8 @@ import Header from './Header'
 const HeadSection = ({ title }) => {
   const setHoveredTitle = useSetRecoilState(hoveredNavAtom)
 
+  const headTitle = `J'LEO SVUE - ${title}`
+
   useEffect(() => {
     setHoveredTitle('')
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -18,7 +20,7 @@ const HeadSection = ({ title }) => {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>J&apos;LEO SVUE - {title}</title>
+        <title>{headTitle}</title>
       </Head>
       <Header />
     </>

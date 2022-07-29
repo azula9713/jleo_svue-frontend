@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 import { useRecoilState } from 'recoil'
 import styled from 'styled-components'
 import { HiMenu } from 'react-icons/hi'
